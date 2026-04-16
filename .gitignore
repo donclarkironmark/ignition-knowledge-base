@@ -38,6 +38,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# fetched content (rebuilt from GitHub at build time)
+/content
+
+# claude code local-only settings
+.claude/settings.local.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
