@@ -19,9 +19,13 @@
   --color-brand-gray: var(--brand-gray);
   --color-brand-off-white: var(--brand-off-white);
   --color-brand-border: var(--brand-border);
+  /* Ported Insider code references these Tailwind utilities */
+  --color-ironmark-red: var(--brand-red);
+  --color-ironmark-cyan: var(--brand-cyan);
   --font-sans: var(--font-raleway);
   --font-heading: var(--font-bebas-neue);
   --font-serif: var(--font-lora);
+  --font-veneer: var(--font-bebas-neue);
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 

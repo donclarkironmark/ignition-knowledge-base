@@ -3,8 +3,18 @@ import { jwtVerify } from 'jose';
 
 const COOKIE_NAME = 'kb-session';
 
-// Routes that don't require authentication
-const PUBLIC_ROUTES = ['/login', '/api/auth'];
+// Routes that don't require authentication.
+// Insider subscribe/unsubscribe endpoints must be callable from email clients
+// (recipients of digest emails click unsubscribe links without logging in).
+// The cron endpoint authenticates via CRON_SECRET bearer (enforced inside the route).
+const PUBLIC_ROUTES = [
+  '/login',
+  '/api/auth',
+  '/api/insider/subscribe',
+  '/api/insider/unsubscribe',
+  '/api/insider/cron',
+  '/insider/unsubscribe',
+];
 
 /**
  * Auth middleware — simple JWT cookie check.
@@ -27,6 +37,14 @@ export async function middleware(request: NextRequest) {
 
   // Public routes — skip
   if (PUBLIC_ROUTES.some((route) => pathname.startsWith(route))) {
+    return NextResponse.next();
+  }
+
+  // API routes that carry an Authorization: Bearer header do their own auth
+  // (e.g. /api/insider/admin/posts supports INSIDER_SERVICE_TOKEN for Routines,
+  // /api/insider/cron/* uses CRON_SECRET). Let them through; the route handler
+  // validates the token and returns 401/403 on its own.
+  if (pathname.startsWith('/api/') && request.headers.get('authorization')?.startsWith('Bearer ')) {
     return NextResponse.next();
   }
 

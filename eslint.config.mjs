@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated search-index bundles — shipped as-is, not our source
+    "public/pagefind/**",
   ]),
 ]);
 

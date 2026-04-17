@@ -45,10 +45,19 @@ export const NAV_SECTIONS: NavSection[] = [
     ],
   },
   {
+    heading: 'Insider',
+    items: [
+      { label: 'Feed', path: '/insider', status: 'live' },
+      { label: 'Editions', path: '/insider/editions', status: 'live' },
+      { label: 'Admin', path: '/insider/admin' },
+    ],
+  },
+  {
     heading: 'Resources',
     items: [
       { label: 'Demo Guide', path: '/demo-guide' },
       { label: 'Glossary', path: '/resources/glossary' },
+      { label: 'Help Guides', path: '/resources/help-guides' },
     ],
   },
 ];

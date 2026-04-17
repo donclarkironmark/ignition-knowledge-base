@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway, Bebas_Neue, Lora } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -41,6 +42,7 @@ export default function RootLayout({
         className={`${raleway.variable} ${bebasNeue.variable} ${lora.variable} antialiased`}
       >
         {children}
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );

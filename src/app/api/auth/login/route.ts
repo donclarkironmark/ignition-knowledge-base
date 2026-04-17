@@ -4,7 +4,8 @@ import { checkPassword, createSessionToken, COOKIE_NAME } from '@/lib/auth/sessi
 /**
  * POST /api/auth/login
  *
- * Validates the shared password and sets a signed session cookie.
+ * Validates the password (viewer or admin) and sets a signed session cookie
+ * whose payload carries the resolved role.
  */
 export async function POST(request: NextRequest) {
   let body: { password?: string };
@@ -19,13 +20,14 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Password is required' }, { status: 400 });
   }
 
-  if (!checkPassword(password)) {
+  const role = checkPassword(password);
+  if (!role) {
     return NextResponse.json({ error: 'Incorrect password' }, { status: 401 });
   }
 
-  const token = await createSessionToken();
+  const token = await createSessionToken(role);
 
-  const response = NextResponse.json({ ok: true });
+  const response = NextResponse.json({ ok: true, role });
   response.cookies.set(COOKIE_NAME, token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
