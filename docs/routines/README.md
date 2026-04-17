@@ -41,16 +41,43 @@ back if needed in the future.
 
 ### 4. Configure the cloud environment
 
-Under **Environment** (or your project's equivalent), add these variables.
-Every Routine needs them all — Claude Code Routines share one environment
-per project.
+Environment variables live on a **cloud environment**, which is shared
+across all Routines that reference it (same system as Claude Code on the
+Web — see [docs](https://code.claude.com/docs/en/claude-code-on-the-web#the-cloud-environment)).
+Configure it once; all three Routines inherit.
 
-| Variable | Value | Used by |
-|---|---|---|
-| `APP_URL` | `https://YOUR-VERCEL-URL` (production URL) | All 3 |
-| `INSIDER_SERVICE_TOKEN` | `174b24d56b25f1200aa3b36279a51820945c4a78456e8e2fa4f0872b1e3adec6` | All 3 — bearer token for POSTs |
-| `SUPABASE_URL` | `https://pzwxjfgireeumrspkjvm.supabase.co` | Routine 3 — reads posts directly |
-| `SUPABASE_SERVICE_ROLE_KEY` | (the service_role key from Vercel) | Routine 3 |
+**Click path:** at `claude.ai/code/routines`, click **New routine**. In the
+**"Select an environment"** section, pick an existing environment (the
+default one is fine) or create a new one, then click the **gear / settings
+icon** next to its name. A dialog appears with an **Environment variables**
+field that accepts `.env` format — one `KEY=value` per line, no quotes.
+
+Paste this block:
+
+```
+APP_URL=https://YOUR-VERCEL-URL
+INSIDER_SERVICE_TOKEN=174b24d56b25f1200aa3b36279a51820945c4a78456e8e2fa4f0872b1e3adec6
+SUPABASE_URL=https://pzwxjfgireeumrspkjvm.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB6d3hqZmdpcmVldW1yc3BranZtIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NjQyMzgxMywiZXhwIjoyMDkxOTk5ODEzfQ.vh5NV2vBEtG2g9nfCy4vX61_qGL3rX20YX3VZtNTTlA
+```
+
+Summary of what each does:
+
+| Variable | Used by |
+|---|---|
+| `APP_URL` | All 3 — base URL for POSTs to the KB app |
+| `INSIDER_SERVICE_TOKEN` | All 3 — bearer token for admin POSTs |
+| `SUPABASE_URL` | Routine 3 only — reads posts directly |
+| `SUPABASE_SERVICE_ROLE_KEY` | Routine 3 only |
+
+> **About secret storage.** Anthropic notes that a dedicated secrets store
+> isn't yet available — environment variables are stored with the environment
+> configuration and are visible to anyone who can edit that environment. For
+> a two-person admin set that's fine; revisit if the environment becomes
+> shared broadly.
+>
+> Secrets are write-only after save — to change a value you delete the entry
+> and add it back.
 
 > **Security note.** The `INSIDER_SERVICE_TOKEN` bypasses session auth — it
 > grants write access to the Insider admin API. The `SUPABASE_SERVICE_ROLE_KEY`
