@@ -58,19 +58,42 @@ published_at descending.
   (use the Monday of the week being covered, not today's Friday)
 - **week_start** — ISO date, Monday of the covered week
 - **week_end** — ISO date, Sunday of the covered week
-- **executive_summary** — 3–4 sentences. This is the most important part of
-  the edition. Answer: what's the one thing Ironmark should do differently
-  next week based on this week's signals? Lead with the action, not the
-  signal. Example: "Accelerate the QSR loyalty pitch deck — SOCi's
-  $100M raise means we'll see them at every QSR RFP through Q3. The
-  funding announcement also repositioned them from 'reviews vendor' to
-  'full local marketing stack,' which we should address head-on in the
-  competitive kit."
-- **data_point_of_week** — one punchy stat from the week's posts (or
-  leave null if nothing quantitative stood out)
-- **coming_up** — 1–2 sentences on what's on the radar for next week. Use
-  `radar` section posts or general industry calendar (earnings, analyst
-  events, regulatory deadlines you know are coming)
+- **executive_summary** — 3–4 sentences. This is the editorial voice of the
+  edition: **observational, not directive**. Tell the reader what this week
+  *means* — how the signals connect, what the market is revealing, why
+  Ironmark's position in the story matters. Never tell anyone what to do
+  ("the team should...", "refresh the deck...", "flag to AMs..."). No
+  action items, no homework — that's not what this section is for. Write
+  like a sharp newsletter voice (think The Diff, Stratechery, Money Stuff):
+  confident, a little wry, connecting dots the reader wouldn't connect on
+  their own.
+
+  Good example (observational): *"Meta's March attribution change is
+  quietly deflating reported conversions for every local advertiser in the
+  country — same campaigns, smaller numbers. That's not bad news for
+  Ironmark; it's the strongest argument for the attribution story we've
+  made in a year. When the platform's own numbers don't add up, clients
+  lean harder on the system that reconciles the full funnel. In parallel,
+  the Canva + Ortto deal is the real tell of the week: design tools and
+  marketing automation are collapsing into one vendor, and the mid-market
+  is the prize."*
+
+  Bad example (directive — don't do this): *"Get ahead of client
+  conversations on Meta numbers before Monday. Refresh the Chatmeter
+  slide. Flag the new HIPAA guidance to healthcare AMs."*
+
+- **data_point_of_week** — one punchy stat from the week's posts, pulled
+  without editorializing. If nothing quantitative stood out, set to null.
+
+- **coming_up** — 1–2 sentences, forward-looking but still observational.
+  What's about to surface that this week's signals foreshadow? Events,
+  earnings calls, regulatory deadlines worth watching — and what they'll
+  likely reveal, not what anyone should do about them.
+
+  Good example: *"Q1 earnings from the ad-tech cohort land next week —
+  SOCi, Yext, and Reputation will have to address the Meta attribution
+  hit on their calls. That'll be the first public acknowledgment that
+  the category is feeling it."*
 
 ## Step 4 — POST the edition
 
