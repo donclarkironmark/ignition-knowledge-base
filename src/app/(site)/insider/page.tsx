@@ -107,15 +107,15 @@ export default function InsiderIndexPage() {
           ))}
         </div>
 
-        <div className="relative shrink-0">
-          <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+        <div className="flex items-center shrink-0 w-52 bg-white border border-slate-200 rounded-lg focus-within:border-slate-400 transition-colors">
+          <Search size={14} aria-hidden="true" className="ml-3 shrink-0 text-slate-400" />
           <input
             data-testid="search-input"
             type="text"
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder="Search posts…"
-            className="pl-8 pr-4 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-slate-400 transition-colors w-52"
+            className="flex-1 min-w-0 bg-transparent pl-2 pr-3 py-2 text-sm focus:outline-none"
           />
         </div>
       </div>
