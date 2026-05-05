@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: 'Help Guides' };
 
 const GUIDES = [
   {
-    title: 'Using This Knowledge Base',
+    title: 'Using Ignition Insider',
     description:
       'How to navigate sections, find content fast, and share links. Covers login, search, and the capability status system.',
     href: '/resources/help-guides/using-this-kb',
@@ -21,9 +21,9 @@ const GUIDES = [
     icon: <MonitorPlay size={22} />,
   },
   {
-    title: 'Insider Admin How-To',
+    title: 'Intel & Insights Admin How-To',
     description:
-      'How to create, review, and publish Insider posts; assemble weekly editions; and manage subscribers.',
+      'How to create, review, and publish posts; assemble weekly editions; and manage subscribers in the Intel & Insights feed.',
     href: '/resources/help-guides/insider-admin-how-to',
     icon: <Newspaper size={22} />,
   },
@@ -34,7 +34,7 @@ export default function HelpGuidesIndex() {
     <>
       <PageHeader
         title="Help Guides"
-        subtitle="Internal playbooks for the Ironmark team — how to use this KB, run demos, and work the Insider workflow. Step-by-step Tango walkthroughs are embedded inside each guide."
+        subtitle="Internal playbooks for the Ironmark team — how to use Ignition Insider, run demos, and work the Intel & Insights workflow. Step-by-step Tango walkthroughs are embedded inside each guide."
       />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">

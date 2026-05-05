@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <PageHeader
-        title="Ignition Knowledge Base"
+        title="Ignition Insider"
         subtitle="Everything you need to understand, explain, and sell Ironmark's AI-powered distributed marketing platform."
       />
 
@@ -144,7 +144,7 @@ export default function HomePage() {
         />
         <QuickLinkCard
           title="Help Guides"
-          description="Internal team playbooks — using this KB, demo walkthroughs, and the Insider admin how-to."
+          description="Internal team playbooks — using Ignition Insider, demo walkthroughs, and the admin how-to."
           href="/resources/help-guides"
           icon={<BookOpen className="w-6 h-6" />}
         />

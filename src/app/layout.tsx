@@ -24,11 +24,11 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ignition Knowledge Base",
-    template: "%s | Ignition Knowledge Base",
+    default: "Ignition Insider",
+    template: "%s | Ignition Insider",
   },
   description:
-    "Internal knowledge portal for Ironmark's Ignition platform — strategy, capabilities, competitive intelligence, and GTM enablement.",
+    "The internal home for Ironmark's Ignition platform — capabilities, competitive intelligence, weekly editions, and GTM enablement.",
 };
 
 export default function RootLayout({

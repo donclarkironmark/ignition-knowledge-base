@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ignition Insider
 
-## Getting Started
+Internal product marketing website for Ironmark's Ignition platform — capability deep-dives, weekly competitive intelligence, and demo enablement. Audience: sales, marketing, account managers, executives.
 
-First, run the development server:
+> Repo name still says `ignition-knowledge-base` (legacy); the deployed site is branded **Ignition Insider**.
+
+## Stack
+
+- **Next.js 16** (App Router) + React 19 + TypeScript
+- **Tailwind 4** with `@tailwindcss/typography`
+- **jose** for JWT cookie auth (dual-password: viewer + admin)
+- **Supabase** for the Intel & Insights feed (posts, editions, subscriptions)
+- **OpenAI** for the "Suggest insight" admin helper
+- **Nodemailer** for digest + alert emails
+- **Vercel** deployment with weekly cron triggering the digest send
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
+npm run typecheck
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Copy `.env.example` to `.env.local` and fill in values before running. The Insider feature requires Supabase credentials; static capability pages render without them.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/(site)/` — authenticated pages (capabilities, resources, Intel & Insights)
+- `src/app/api/insider/` — Insider feed + admin + cron API routes
+- `src/lib/insider*.service.ts` — feed, edition, and email services
+- `src/components/` — shared UI components and layout shell
+- `src/config/navigation.ts` — sidebar nav (3 sections, capabilities listed in roadmap order)
+- `docs/routines/` — setup + prompts for the three Claude Code Routines that populate the feed
 
-## Learn More
+## Routines
 
-To learn more about Next.js, take a look at the following resources:
+Three scheduled Claude Code Routines run autonomously to populate the feed:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Daily Competitor Scan** — scans top DMP competitors for news
+2. **Weekly Category & MarTech Scan** — broader industry scan
+3. **Friday Edition Prep** — drafts the next weekly edition for review
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Setup: see [`docs/routines/README.md`](docs/routines/README.md). All Routines POST to `/api/insider/admin/*` via the `INSIDER_SERVICE_TOKEN` bearer; nothing ever auto-publishes — drafts land in the review queue.
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel project auto-deploys from `master`. The Monday-morning digest cron is configured in [`vercel.json`](vercel.json) and uses `CRON_SECRET` for auth. After deploy, verify environment variables are set in the Vercel project settings (matches the [`.env.example`](.env.example) keys).

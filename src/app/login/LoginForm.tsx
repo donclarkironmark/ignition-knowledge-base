@@ -54,7 +54,7 @@ export function LoginForm() {
           >
             Ignition
           </h1>
-          <p className="mt-1 text-sm text-[#707070]">Knowledge Base</p>
+          <p className="mt-1 text-sm text-[#707070]">Insider</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">

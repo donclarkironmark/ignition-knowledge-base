@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 /**
  * Thin wrapper that renders the Insider-local nav (Feed / Editions / Admin)
- * inside the KB's SiteShell. No full-page chrome — the parent `(site)` layout
- * already supplies the KB header and sidebar.
+ * inside the SiteShell. No full-page chrome — the parent `(site)` layout
+ * already supplies the site header and sidebar.
  */
 export default function InsiderLayout({ children }: { children: React.ReactNode }) {
   return (

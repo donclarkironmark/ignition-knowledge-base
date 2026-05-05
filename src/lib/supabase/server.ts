@@ -1,7 +1,7 @@
 import { createClient as createSupabaseClient, type SupabaseClient } from '@supabase/supabase-js';
 
 /**
- * The KB does not use Supabase Auth — access control is enforced at the
+ * Ignition Insider does not use Supabase Auth — access control is enforced at the
  * application layer (secureRoute for admin APIs, cronRoute for cron,
  * `.eq('status','published')` filters on public reads). We therefore use a
  * service-role client for all server-side Supabase access. Public read paths

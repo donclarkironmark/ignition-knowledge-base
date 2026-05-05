@@ -30,7 +30,7 @@ export function SiteHeader({ onMenuToggle }: SiteHeaderProps) {
         </button>
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3" aria-label="Ignition Knowledge Base — home">
+        <Link href="/" className="flex items-center gap-3" aria-label="Ignition Insider — home">
           <Image
             src="/ignition-logo.svg"
             alt="Ignition"
@@ -40,7 +40,7 @@ export function SiteHeader({ onMenuToggle }: SiteHeaderProps) {
             className="h-7 w-auto"
           />
           <span className="hidden sm:inline text-xs text-brand-gray font-medium tracking-wide uppercase">
-            Knowledge Base
+            Insider
           </span>
         </Link>
       </div>

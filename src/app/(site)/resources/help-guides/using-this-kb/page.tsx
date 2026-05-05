@@ -5,9 +5,9 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { TangoEmbed } from '@/components/ui/TangoEmbed';
 
-export const metadata: Metadata = { title: 'Using This Knowledge Base' };
+export const metadata: Metadata = { title: 'Using Ignition Insider' };
 
-export default function UsingThisKbPage() {
+export default function UsingInsiderPage() {
   return (
     <>
       <Link
@@ -19,17 +19,17 @@ export default function UsingThisKbPage() {
       </Link>
 
       <PageHeader
-        title="Using This Knowledge Base"
-        subtitle="The 5-minute tour: login, navigation, capability status, Insider, and sharing links."
+        title="Using Ignition Insider"
+        subtitle="The 5-minute tour: login, navigation, capability status, the Intel & Insights feed, and sharing links."
       />
 
       <SectionHeading>Logging in</SectionHeading>
       <p className="text-brand-gray leading-relaxed mb-3">
-        The KB uses a shared password. There are two levels:
+        Ignition Insider uses a shared password. There are two levels:
       </p>
       <ul className="list-disc pl-6 space-y-1 text-brand-gray text-sm mb-6">
-        <li><strong>Viewer</strong> — read all static pages and the Insider feed.</li>
-        <li><strong>Admin</strong> — also create/edit Insider posts and editions. Ask Don for the admin password.</li>
+        <li><strong>Viewer</strong> — read all capability pages and the Intel & Insights feed.</li>
+        <li><strong>Admin</strong> — also create, review, and publish posts and editions in the feed. Ask Don for the admin password.</li>
       </ul>
 
       {/*
@@ -38,27 +38,33 @@ export default function UsingThisKbPage() {
       */}
       <TangoEmbed
         src="https://app.tango.us/app/embed/REPLACE-WITH-TANGO-WORKFLOW-ID"
-        title="Walkthrough: Logging in to the Knowledge Base"
+        title="Walkthrough: Logging in to Ignition Insider"
       />
 
       <SectionHeading>Navigation</SectionHeading>
       <p className="text-brand-gray leading-relaxed mb-3">
-        The sidebar groups content into six sections. Top-to-bottom follows a
-        natural sales conversation:
+        The sidebar has three sections, top to bottom:
       </p>
       <ol className="list-decimal pl-6 space-y-2 text-brand-gray text-sm mb-6">
-        <li><strong>Platform</strong> — what Ignition is and why we built it.</li>
-        <li><strong>Capabilities</strong> — the seven platform capabilities, each tagged LIVE / PHASE 2 / PHASE 3.</li>
-        <li><strong>Industries</strong> — vertical-specific value props (QSR, Healthcare, Automotive, FinServ, Franchise).</li>
-        <li><strong>Competitive</strong> — head-to-head comparisons with the main DMPs.</li>
-        <li><strong>Insider</strong> — live competitive intelligence feed backed by Supabase (see the Insider guide).</li>
-        <li><strong>Resources</strong> — demo guide, glossary, and these help guides.</li>
+        <li>
+          <strong>Intel &amp; Insights</strong> — the live competitive intelligence feed.
+          Posts about competitor moves, category shifts, and customer signals; weekly
+          editions emailed to subscribers; admin tools for the editorial team.
+        </li>
+        <li>
+          <strong>Capabilities</strong> — one page per Ignition platform theme.
+          ROI Reporting and Iggy AI are live today; Campaign Management, Dynamic AI
+          Creative, CDP &amp; Audience Builder, Distributed Marketing/DAM, and
+          Full-funnel &amp; Automation are on the roadmap.
+        </li>
+        <li>
+          <strong>Resources</strong> — Demo Guide, Glossary, and these Help Guides.
+        </li>
       </ol>
 
       <SectionHeading>Capability status badges</SectionHeading>
       <p className="text-brand-gray leading-relaxed mb-3">
-        Each capability shows one of three badges. These reflect real state —
-        if a badge says <em>LIVE</em>, the capability is shipping in production:
+        Each capability page shows a status banner at the top. Three states matter:
       </p>
       <div className="space-y-2 mb-6 text-sm">
         <div className="flex gap-3 items-start">
@@ -67,11 +73,11 @@ export default function UsingThisKbPage() {
         </div>
         <div className="flex gap-3 items-start">
           <span className="shrink-0 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-700">PHASE 2</span>
-          <span className="text-brand-gray">In development. Use directional language — &ldquo;coming soon&rdquo; rather than fixed dates.</span>
+          <span className="text-brand-gray">In active development. Use directional language — &ldquo;coming soon&rdquo; rather than fixed dates.</span>
         </div>
         <div className="flex gap-3 items-start">
-          <span className="shrink-0 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-100 text-gray-600">PHASE 3</span>
-          <span className="text-brand-gray">On the roadmap. Directionally committed, not scoped or scheduled yet.</span>
+          <span className="shrink-0 inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-700">ROADMAP</span>
+          <span className="text-brand-gray">Committed on the roadmap; timing not yet quarter-locked. Position as part of the platform vision.</span>
         </div>
       </div>
       <p className="text-brand-gray text-sm mb-6">
@@ -81,20 +87,20 @@ export default function UsingThisKbPage() {
       <SectionHeading>Sharing links with teammates</SectionHeading>
       <p className="text-brand-gray leading-relaxed mb-3">
         Every page has its own URL. Copy from the address bar and share in Slack
-        or email. The link will prompt for the KB password the first time —
+        or email. The link will prompt for the Insider password the first time —
         anyone with the password can view.
       </p>
 
       <TangoEmbed
         src="https://app.tango.us/app/embed/REPLACE-WITH-TANGO-WORKFLOW-ID"
-        title="Walkthrough: Sharing a KB link"
+        title="Walkthrough: Sharing an Ignition Insider link"
       />
 
       <SectionHeading>Who to ask</SectionHeading>
       <ul className="list-disc pl-6 space-y-1 text-brand-gray text-sm mb-6">
         <li><strong>Content corrections or additions</strong> — Don Clark (VP Product).</li>
         <li><strong>Access issues / password resets</strong> — Don or Jordan.</li>
-        <li><strong>Bug in the KB site itself</strong> — mention in #ignition-kb on Slack.</li>
+        <li><strong>Bug in the site itself</strong> — mention in #ignition-insider on Slack.</li>
       </ul>
     </>
   );

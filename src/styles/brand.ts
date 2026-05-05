@@ -2,7 +2,7 @@
  * Ironmark brand tokens and shared styling constants.
  *
  * Single source of truth for colors, fonts, and prose classes
- * used across the Knowledge Base.
+ * used across Ignition Insider.
  */
 
 export const BRAND = {

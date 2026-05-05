@@ -1,6 +1,8 @@
-# Ignition Knowledge Base
+# Ignition Insider
 
-Internal product marketing website for Ironmark's Ignition platform. Audience: sales, marketing, account managers, executives (non-technical). Content is fully static TSX — no markdown rendering, no external content sync.
+Internal product marketing website for Ironmark's Ignition platform — capability deep-dives, weekly competitive intelligence, demo enablement. Audience: sales, marketing, account managers, executives (non-technical). Static TSX content for capability/resource pages; Supabase-backed posts and editions for the Intel & Insights feed.
+
+> The repo is named `ignition-knowledge-base` for now (the original project name); the deployed site is branded **Ignition Insider**. Repo rename is a Github-side operation we can do later.
 
 ## Tech Stack
 - **Next.js 16** (App Router) + React 19 + TypeScript 5.9

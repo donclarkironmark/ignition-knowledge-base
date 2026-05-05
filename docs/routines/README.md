@@ -34,7 +34,7 @@ Open https://claude.ai/code/routines and click **New Routine**.
 
 ### 3. Connect the GitHub repo
 
-Connect `donclarkironmark/ignition-knowledge-base`. All three Routines use
+Connect `donclarkironmark/ignition-knowledge-base` (the Github repo for Ignition Insider; rename pending). All three Routines use
 the same repo — no code in the repo is used by the routine prompts directly,
 but connecting it gives the Routine a working directory and lets it commit
 back if needed in the future.

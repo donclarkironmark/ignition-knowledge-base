@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import { jwtVerify } from 'jose';
 import { COOKIE_NAME } from '@/lib/auth/session';
 
-// ── KB admin auth wrapper ────────────────────────────────────────────
+// ── Insider admin auth wrapper ───────────────────────────────────────
 
 export interface KbAuthContext {
   role: 'admin';
-  userId: null; // KB does not use Supabase Auth — no per-user UUIDs
+  userId: null; // Ignition Insider does not use Supabase Auth — no per-user UUIDs
 }
 
 type AdminHandler = (
@@ -38,7 +38,7 @@ async function getSessionRole(request: NextRequest): Promise<'viewer' | 'admin' 
 }
 
 /**
- * Wraps an API route handler and enforces that the KB session JWT carries
+ * Wraps an API route handler and enforces that the session JWT carries
  * `role === 'admin'`. Matches the `secureRoute` signature used by the ported
  * Insider code so that route files port verbatim.
  */
