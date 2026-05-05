@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Layers, Globe, Swords, Presentation } from 'lucide-react';
+import { Newspaper, Swords, Presentation, BookOpen } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { CapabilityCard } from '@/components/ui/CapabilityCard';
 import { QuickLinkCard } from '@/components/ui/QuickLinkCard';
@@ -26,10 +26,10 @@ export default function HomePage() {
 
       <div className="flex flex-wrap gap-3 mb-12">
         <Link
-          href="/platform"
+          href="/insider"
           className="inline-flex items-center rounded-md bg-brand-red px-5 py-2.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
         >
-          Explore the Platform
+          Today&apos;s Intel
         </Link>
         <Link
           href="/capabilities"
@@ -113,21 +113,15 @@ export default function HomePage() {
       <SectionHeading>Quick Links</SectionHeading>
       <div className="grid gap-4 sm:grid-cols-2 mb-6">
         <QuickLinkCard
-          title="What Is Ignition?"
-          description="The full platform story — problem, solution, through-channel model, and three compounding phases."
-          href="/platform"
-          icon={<Layers className="w-6 h-6" />}
-        />
-        <QuickLinkCard
-          title="Industries We Serve"
-          description="Vertical-specific messaging for healthcare, QSR, automotive, financial services, and franchise brands."
-          href="/verticals"
-          icon={<Globe className="w-6 h-6" />}
+          title="Intel & Insights Feed"
+          description="Live competitive intelligence — competitor moves, category shifts, and weekly editions for the team."
+          href="/insider"
+          icon={<Newspaper className="w-6 h-6" />}
         />
         <QuickLinkCard
           title="Competitive Positioning"
           description="Head-to-head comparisons, capability matrix, and talk tracks for common competitive situations."
-          href="/competitive"
+          href="/capabilities/competitive"
           icon={<Swords className="w-6 h-6" />}
         />
         <QuickLinkCard
@@ -135,6 +129,12 @@ export default function HomePage() {
           description="How to show Ignition effectively — recommended flow, key talking points, and common questions."
           href="/demo-guide"
           icon={<Presentation className="w-6 h-6" />}
+        />
+        <QuickLinkCard
+          title="Help Guides"
+          description="Internal team playbooks — using this KB, demo walkthroughs, and the Insider admin how-to."
+          href="/resources/help-guides"
+          icon={<BookOpen className="w-6 h-6" />}
         />
       </div>
     </>

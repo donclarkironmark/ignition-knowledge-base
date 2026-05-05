@@ -122,7 +122,7 @@ export default function CapabilitiesOverviewPage() {
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/roi-reporting">ROI Reporting deep-dive</InternalLink>
         <InternalLink href="/capabilities/iggy-ai">Iggy AI deep-dive</InternalLink>
-        <InternalLink href="/platform">Learn the full Ignition story</InternalLink>
+        <InternalLink href="/capabilities/competitive">How Ignition stacks up vs. alternatives</InternalLink>
       </div>
     </>
   );

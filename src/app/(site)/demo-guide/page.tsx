@@ -78,8 +78,8 @@ export default function DemoGuidePage() {
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/roi-reporting">Review ROI Reporting before your demo</InternalLink>
         <InternalLink href="/capabilities/iggy-ai">Review Iggy AI before your demo</InternalLink>
-        <InternalLink href="/competitive">Review competitive positioning</InternalLink>
-        <InternalLink href="/verticals">Find vertical-specific language for your prospect</InternalLink>
+        <InternalLink href="/capabilities/competitive">Review competitive positioning</InternalLink>
+        <InternalLink href="/insider">Check today&apos;s competitive intel feed</InternalLink>
       </div>
     </>
   );

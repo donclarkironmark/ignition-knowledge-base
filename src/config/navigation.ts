@@ -13,10 +13,11 @@ export interface NavSection {
 
 export const NAV_SECTIONS: NavSection[] = [
   {
-    heading: 'Platform',
+    heading: 'Intel & Insights',
     items: [
-      { label: 'What Is Ignition', path: '/platform' },
-      { label: 'Why Ignition', path: '/platform/why-ignition' },
+      { label: 'Feed', path: '/insider', status: 'live' },
+      { label: 'Editions', path: '/insider/editions', status: 'live' },
+      { label: 'Admin', path: '/insider/admin' },
     ],
   },
   {
@@ -25,31 +26,7 @@ export const NAV_SECTIONS: NavSection[] = [
       { label: 'Overview', path: '/capabilities' },
       { label: 'ROI-Based Reporting', path: '/capabilities/roi-reporting', status: 'live' },
       { label: 'Iggy AI Insights Agent', path: '/capabilities/iggy-ai', status: 'live' },
-    ],
-  },
-  {
-    heading: 'Industries',
-    items: [
-      { label: 'Overview', path: '/verticals' },
-      { label: 'Healthcare & Chiropractic', path: '/verticals/healthcare' },
-      { label: 'Quick Service Restaurants', path: '/verticals/qsr' },
-      { label: 'Automotive Dealers', path: '/verticals/automotive' },
-      { label: 'Financial Services', path: '/verticals/financial-services' },
-      { label: 'Franchise & Multi-Unit', path: '/verticals/franchise' },
-    ],
-  },
-  {
-    heading: 'Competitive',
-    items: [
-      { label: 'Competitive Positioning', path: '/competitive' },
-    ],
-  },
-  {
-    heading: 'Insider',
-    items: [
-      { label: 'Feed', path: '/insider', status: 'live' },
-      { label: 'Editions', path: '/insider/editions', status: 'live' },
-      { label: 'Admin', path: '/insider/admin' },
+      { label: 'Competitive Positioning', path: '/capabilities/competitive' },
     ],
   },
   {

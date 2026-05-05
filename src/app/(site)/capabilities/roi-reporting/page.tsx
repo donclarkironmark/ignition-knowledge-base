@@ -92,7 +92,7 @@ export default function RoiReportingPage() {
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/iggy-ai">See how Iggy turns dashboard data into actionable insights</InternalLink>
         <InternalLink href="/capabilities">See all platform capabilities</InternalLink>
-        <InternalLink href="/competitive">See how ROI Reporting compares to alternatives</InternalLink>
+        <InternalLink href="/capabilities/competitive">See how ROI Reporting compares to alternatives</InternalLink>
       </div>
     </>
   );

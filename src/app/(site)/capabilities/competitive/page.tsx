@@ -147,7 +147,7 @@ export default function CompetitivePage() {
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/roi-reporting">See ROI Reporting in detail</InternalLink>
         <InternalLink href="/capabilities/iggy-ai">See Iggy AI in detail</InternalLink>
-        <InternalLink href="/platform/why-ignition">See the five things no competitor can match</InternalLink>
+        <InternalLink href="/insider">Check the latest competitive intel</InternalLink>
       </div>
     </>
   );

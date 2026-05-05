@@ -10,10 +10,10 @@ Internal product marketing website for Ironmark's Ignition platform. Audience: s
 - **Vercel** deployment
 
 ## Architecture
-- **15 static TSX pages** under `src/app/(site)/` — no markdown, no content pipeline
-- **Password auth** — single shared password, JWT cookie, API routes at `/api/auth/login` and `/api/auth/logout`
+- **Static TSX content + Supabase-backed Insider feature** under `src/app/(site)/`
+- **Dual-password auth** — `KB_PASSWORD` (viewer) and `KB_ADMIN_PASSWORD` (admin), JWT cookie carries role; API routes at `/api/auth/{login,logout,session}`
 - **Navigation** defined in `src/config/navigation.ts` — sections, items, status badges
-- **Shared UI components** in `src/components/ui/` (PageHeader, SectionHeading, StatusBadge, CapabilityCard, etc.)
+- **Shared UI components** in `src/components/ui/` (PageHeader, SectionHeading, StatusBadge, CapabilityCard, TangoEmbed, etc.)
 - **Route group** `(site)` wraps all authenticated pages with SiteShell layout
 
 ## Brand
@@ -21,16 +21,16 @@ Internal product marketing website for Ironmark's Ignition platform. Audience: s
 - Fonts: Raleway (body), Bebas Neue (headings), Lora (serif accent) — loaded via `next/font/google`
 - Brand tokens in `src/styles/brand.ts`
 
-## Content Structure (5 sections, 15 pages)
-- **Platform**: What Is Ignition, Why Ignition
-- **Capabilities**: Overview (all 7 tiered), ROI Reporting (live), Iggy AI (live)
-- **Industries**: Overview, Healthcare, QSR, Automotive, Financial Services, Franchise
-- **Competitive**: Head-to-head comparisons, capability matrix
-- **Resources**: Demo Guide, Glossary
+## Content Structure (3 nav sections)
+- **Intel & Insights**: Feed (`/insider`), Editions (`/insider/editions`), Admin (`/insider/admin`) — Supabase-backed, populated by Claude Code Routines + manual admin entry
+- **Capabilities**: Overview (all 7 tiered), ROI Reporting (live), Iggy AI (live), Competitive Positioning
+- **Resources**: Demo Guide, Glossary, Help Guides (Tango-embed walkthroughs)
+
+> Removed in the IA simplification: `/platform/*` and `/verticals/*` (deleted), `/competitive` (moved to `/capabilities/competitive`). Old URLs 301-redirect via `next.config.ts`.
 
 ## Content Rules
 - NO pricing, revenue, ARR targets, or financial details anywhere
-- Competitors named only on `/competitive` page; generic references elsewhere
+- Competitors named only on `/capabilities/competitive` and inside the Intel & Insights feed; generic references elsewhere
 - Capability status: LIVE (green) / PHASE 2 (amber) / PHASE 3 (gray)
 - Phase labels, not quarter-based timelines (avoids credibility risk when dates slip)
 
