@@ -154,7 +154,7 @@ export interface UpdateEditionRequest {
 // ── Config constants ──────────────────────────────────────────
 
 export const INSIDER_CATEGORIES: { value: InsiderCategory; label: string; color: string }[] = [
-  { value: 'competitor', label: 'Competitor Watch', color: '#EF462F' },
+  { value: 'competitor', label: 'Competitor Watch', color: '#E9472F' },
   { value: 'category', label: 'Category & Market', color: '#38C6F4' },
   { value: 'customer', label: 'Customer & Prospect Intel', color: '#10B981' },
   { value: 'martech', label: 'MarTech Radar', color: '#8B5CF6' },

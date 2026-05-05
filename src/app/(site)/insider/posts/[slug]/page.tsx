@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic';
 // ── Category colors ───────────────────────────────────────────────────────
 
 const CATEGORY_META: Record<InsiderCategory, { label: string; color: string; bg: string; text: string }> = {
-  competitor: { label: 'Competitor Watch', color: '#EF462F', bg: 'bg-red-50', text: 'text-red-600' },
+  competitor: { label: 'Competitor Watch', color: '#E9472F', bg: 'bg-red-50', text: 'text-red-600' },
   category:   { label: 'Category & Market', color: '#38C6F4', bg: 'bg-cyan-50', text: 'text-cyan-600' },
   customer:   { label: 'Customer Intel', color: '#10B981', bg: 'bg-emerald-50', text: 'text-emerald-600' },
   martech:    { label: 'MarTech Radar', color: '#8B5CF6', bg: 'bg-violet-50', text: 'text-violet-600' },

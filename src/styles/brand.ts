@@ -7,7 +7,7 @@
 
 export const BRAND = {
   colors: {
-    red: '#EF462F',
+    red: '#E9472F',
     cyan: '#38C6F4',
     gray: '#707070',
     offWhite: '#f4f2f2',

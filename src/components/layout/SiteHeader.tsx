@@ -1,7 +1,9 @@
 'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Menu, LogOut, Flame } from 'lucide-react';
+import { Menu, LogOut } from 'lucide-react';
 
 interface SiteHeaderProps {
   onMenuToggle: () => void;
@@ -27,16 +29,20 @@ export function SiteHeader({ onMenuToggle }: SiteHeaderProps) {
           <Menu className="w-5 h-5" />
         </button>
 
-        {/* Logo / site title */}
-        <div className="flex items-center gap-2">
-          <Flame className="w-5 h-5 text-brand-red" />
-          <span className="font-heading text-xl tracking-wide text-foreground">
-            Ignition
-          </span>
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3" aria-label="Ignition Knowledge Base — home">
+          <Image
+            src="/ignition-logo.svg"
+            alt="Ignition"
+            width={140}
+            height={32}
+            priority
+            className="h-7 w-auto"
+          />
           <span className="hidden sm:inline text-xs text-brand-gray font-medium tracking-wide uppercase">
             Knowledge Base
           </span>
-        </div>
+        </Link>
       </div>
 
       {/* Logout */}

@@ -32,7 +32,7 @@ export function SiteNav({ onLinkClick }: SiteNavProps) {
       {/* Nav sections */}
       {NAV_SECTIONS.map((section) => (
         <div key={section.heading}>
-          <p className="px-3 mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-brand-gray">
+          <p className="px-3 mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-brand-red">
             {section.heading}
           </p>
           <ul className="flex flex-col gap-0.5">

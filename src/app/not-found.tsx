@@ -10,7 +10,7 @@ export default function NotFound() {
     <div className="flex min-h-screen items-center justify-center bg-[#f4f2f2]">
       <div className="text-center">
         <h1
-          className="text-6xl tracking-wide text-[#EF462F]"
+          className="text-6xl tracking-wide text-[#E9472F]"
           style={{ fontFamily: 'var(--font-bebas-neue), system-ui' }}
         >
           404
@@ -24,7 +24,7 @@ export default function NotFound() {
         <div className="mt-6 flex items-center justify-center gap-4">
           <Link
             href="/"
-            className="rounded-lg bg-[#EF462F] px-5 py-2.5 font-medium text-white transition hover:bg-[#d93d28]"
+            className="rounded-lg bg-[#E9472F] px-5 py-2.5 font-medium text-white transition hover:bg-[#d33e29]"
           >
             Go Home
           </Link>

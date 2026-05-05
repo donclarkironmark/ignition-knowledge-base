@@ -49,7 +49,7 @@ function CategoryBadge({ category }: { category: string }) {
 function Spinner() {
   return (
     <div className="flex items-center justify-center py-16">
-      <div className="w-5 h-5 border-2 border-slate-300 border-t-[#EF462F] rounded-full animate-spin" />
+      <div className="w-5 h-5 border-2 border-slate-300 border-t-[#E9472F] rounded-full animate-spin" />
     </div>
   );
 }
@@ -219,7 +219,7 @@ export default function InsiderAdminPage() {
           </div>
           <Link
             href="/insider/admin/posts/new"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#EF462F] text-white text-sm font-medium rounded-lg hover:bg-[#d43d28] transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#E9472F] text-white text-sm font-medium rounded-lg hover:bg-[#d33e29] transition-colors"
           >
             <Plus size={16} />
             New Post
@@ -252,7 +252,7 @@ export default function InsiderAdminPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors ${
                     activeTab === tab.id
-                      ? 'text-[#EF462F] border-b-2 border-[#EF462F] -mb-px'
+                      ? 'text-[#E9472F] border-b-2 border-[#E9472F] -mb-px'
                       : 'text-slate-500 hover:text-slate-700'
                   }`}
                 >
@@ -328,7 +328,7 @@ function PostTable({
             <tr key={post.id} className="hover:bg-slate-50 transition-colors">
               <td className="px-4 py-3">
                 <div className="flex items-center gap-2">
-                  {post.is_pinned && <Pin size={12} className="text-[#EF462F] flex-shrink-0" />}
+                  {post.is_pinned && <Pin size={12} className="text-[#E9472F] flex-shrink-0" />}
                   <span className="font-medium text-slate-900 line-clamp-1">{post.title}</span>
                 </div>
               </td>
@@ -355,7 +355,7 @@ function PostTable({
                     data-testid={`pin-toggle-${post.id}`}
                     onClick={() => onPin(post.id, post.is_pinned)}
                     disabled={actionLoading === post.id}
-                    className={`p-1.5 transition-colors ${post.is_pinned ? 'text-[#EF462F]' : 'text-slate-400 hover:text-slate-700'}`}
+                    className={`p-1.5 transition-colors ${post.is_pinned ? 'text-[#E9472F]' : 'text-slate-400 hover:text-slate-700'}`}
                     title={post.is_pinned ? 'Unpin' : 'Pin'}
                   >
                     <Pin size={14} />
@@ -460,7 +460,7 @@ function EditionsTab({
         <h2 className="text-sm font-medium text-slate-700">All Editions</h2>
         <button
           onClick={onCreateEdition}
-          className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#EF462F] text-white text-xs font-medium rounded-lg hover:bg-[#d43d28] transition-colors"
+          className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#E9472F] text-white text-xs font-medium rounded-lg hover:bg-[#d33e29] transition-colors"
         >
           <Plus size={13} />
           New Edition
@@ -503,7 +503,7 @@ function EditionsTab({
                   <td className="px-4 py-3 text-right">
                     <Link
                       href={`/insider/admin/editions/${edition.id}`}
-                      className="text-xs text-[#EF462F] hover:underline font-medium"
+                      className="text-xs text-[#E9472F] hover:underline font-medium"
                     >
                       Edit
                     </Link>

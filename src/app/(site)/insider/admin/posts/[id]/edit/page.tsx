@@ -62,7 +62,7 @@ function MultiCheckbox({
             onClick={() => toggle(opt)}
             className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
               selected.includes(opt)
-                ? 'bg-[#EF462F] text-white border-[#EF462F]'
+                ? 'bg-[#E9472F] text-white border-[#E9472F]'
                 : 'bg-white text-slate-600 border-slate-300 hover:border-slate-400'
             }`}
           >
@@ -128,7 +128,7 @@ function TagSelect({
 function Spinner() {
   return (
     <div className="flex items-center justify-center py-16">
-      <div className="w-5 h-5 border-2 border-slate-300 border-t-[#EF462F] rounded-full animate-spin" />
+      <div className="w-5 h-5 border-2 border-slate-300 border-t-[#E9472F] rounded-full animate-spin" />
     </div>
   );
 }
@@ -377,7 +377,7 @@ export default function EditPostPage() {
               onClick={handlePinToggle}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors ${
                 isPinned
-                  ? 'bg-[#EF462F] text-white border-[#EF462F]'
+                  ? 'bg-[#E9472F] text-white border-[#E9472F]'
                   : 'bg-white text-slate-600 border-slate-300 hover:border-slate-400'
               }`}
             >
@@ -411,42 +411,42 @@ export default function EditPostPage() {
           {/* Title */}
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Title <span className="text-[#EF462F]">*</span>
+              Title <span className="text-[#E9472F]">*</span>
             </label>
             <input
               type="text"
               value={title}
               onChange={e => setTitle(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent"
             />
           </div>
 
           {/* Summary */}
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Summary <span className="text-[#EF462F]">*</span>
+              Summary <span className="text-[#E9472F]">*</span>
             </label>
             <textarea
               value={summary}
               onChange={e => setSummary(e.target.value)}
               required
               rows={3}
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent resize-none"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-none"
             />
           </div>
 
           {/* Body */}
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Body (Markdown) <span className="text-[#EF462F]">*</span>
+              Body (Markdown) <span className="text-[#E9472F]">*</span>
             </label>
             <textarea
               value={body}
               onChange={e => setBody(e.target.value)}
               required
               rows={14}
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-mono text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent resize-y"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-mono text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-y"
             />
           </div>
 
@@ -454,13 +454,13 @@ export default function EditPostPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                Category <span className="text-[#EF462F]">*</span>
+                Category <span className="text-[#E9472F]">*</span>
               </label>
               <select
                 value={category}
                 onChange={e => setCategory(e.target.value as InsiderCategory)}
                 required
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent bg-white"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent bg-white"
               >
                 {INSIDER_CATEGORIES.map(cat => (
                   <option key={cat.value} value={cat.value}>{cat.label}</option>
@@ -470,7 +470,7 @@ export default function EditPostPage() {
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1.5">
                 Relevance Score: <span className="font-bold text-slate-900">{relevanceScore}</span>/10
-                <span className="text-[#EF462F]"> *</span>
+                <span className="text-[#E9472F]"> *</span>
               </label>
               <input
                 type="range"
@@ -478,7 +478,7 @@ export default function EditPostPage() {
                 max={10}
                 value={relevanceScore}
                 onChange={e => setRelevanceScore(Number(e.target.value))}
-                className="w-full accent-[#EF462F]"
+                className="w-full accent-[#E9472F]"
               />
               <div className="flex justify-between text-xs text-slate-400 mt-0.5">
                 <span>1 (Low)</span>
@@ -492,40 +492,40 @@ export default function EditPostPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                Source URL <span className="text-[#EF462F]">*</span>
+                Source URL <span className="text-[#E9472F]">*</span>
               </label>
               <input
                 type="url"
                 value={sourceUrl}
                 onChange={e => setSourceUrl(e.target.value)}
                 required
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                Source Name <span className="text-[#EF462F]">*</span>
+                Source Name <span className="text-[#E9472F]">*</span>
               </label>
               <input
                 type="text"
                 value={sourceName}
                 onChange={e => setSourceName(e.target.value)}
                 required
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent"
               />
             </div>
           </div>
 
           <div className="sm:w-1/2">
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Source Date <span className="text-[#EF462F]">*</span>
+              Source Date <span className="text-[#E9472F]">*</span>
             </label>
             <input
               type="date"
               value={sourceDate}
               onChange={e => setSourceDate(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent"
             />
           </div>
 
@@ -556,7 +556,7 @@ export default function EditPostPage() {
               onChange={e => setAdminCommentary(e.target.value)}
               rows={4}
               placeholder="Strategic take on what this means for Ironmark..."
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent resize-none"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-none"
             />
           </div>
 
@@ -586,7 +586,7 @@ export default function EditPostPage() {
                 type="text"
                 value={competitorsMentioned}
                 onChange={e => setCompetitorsMentioned(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent"
               />
             </div>
             <div>
@@ -597,7 +597,7 @@ export default function EditPostPage() {
                 type="text"
                 value={customersMentioned}
                 onChange={e => setCustomersMentioned(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent"
               />
             </div>
           </div>
@@ -607,7 +607,7 @@ export default function EditPostPage() {
             <button
               type="submit"
               disabled={submitting}
-              className="px-6 py-2.5 bg-[#EF462F] text-white text-sm font-medium rounded-lg hover:bg-[#d43d28] disabled:opacity-50 transition-colors"
+              className="px-6 py-2.5 bg-[#E9472F] text-white text-sm font-medium rounded-lg hover:bg-[#d33e29] disabled:opacity-50 transition-colors"
             >
               {submitting ? 'Saving...' : 'Save Changes'}
             </button>

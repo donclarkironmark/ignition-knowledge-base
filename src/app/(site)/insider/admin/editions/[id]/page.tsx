@@ -26,7 +26,7 @@ type PostAssignment = {
 function Spinner() {
   return (
     <div className="flex items-center justify-center py-16">
-      <div className="w-5 h-5 border-2 border-slate-300 border-t-[#EF462F] rounded-full animate-spin" />
+      <div className="w-5 h-5 border-2 border-slate-300 border-t-[#E9472F] rounded-full animate-spin" />
     </div>
   );
 }
@@ -252,7 +252,7 @@ export default function EditionEditorPage() {
                 type="button"
                 onClick={handlePublish}
                 disabled={publishing}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-[#EF462F] text-white text-sm font-medium rounded-lg hover:bg-[#d43d28] disabled:opacity-50 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#E9472F] text-white text-sm font-medium rounded-lg hover:bg-[#d33e29] disabled:opacity-50 transition-colors"
               >
                 <Globe size={14} />
                 {publishing ? 'Publishing...' : 'Publish Edition'}
@@ -280,7 +280,7 @@ export default function EditionEditorPage() {
               onChange={e => setEdTitle(e.target.value)}
               disabled={isPublished}
               placeholder={`Ignition Insider — Week of ${edition.week_start}`}
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent disabled:bg-slate-50 disabled:text-slate-400"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent disabled:bg-slate-50 disabled:text-slate-400"
             />
           </div>
 
@@ -292,7 +292,7 @@ export default function EditionEditorPage() {
               disabled={isPublished}
               rows={4}
               placeholder="This week's key themes and what they mean for Ironmark..."
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
             />
           </div>
 
@@ -304,7 +304,7 @@ export default function EditionEditorPage() {
               disabled={isPublished}
               rows={2}
               placeholder="A compelling stat or figure from this week's research..."
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
             />
           </div>
 
@@ -316,7 +316,7 @@ export default function EditionEditorPage() {
               disabled={isPublished}
               rows={2}
               placeholder="Upcoming events, report drops, or trends to watch..."
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#EF462F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
+              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
             />
           </div>
         </div>
@@ -343,7 +343,7 @@ export default function EditionEditorPage() {
                         value={assignment?.section ?? ''}
                         onChange={e => handleSectionChange(post.id, e.target.value as EditionSection | '')}
                         disabled={isPublished}
-                        className="px-2 py-1 border border-slate-300 rounded text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-[#EF462F] bg-white disabled:bg-slate-50 disabled:text-slate-400"
+                        className="px-2 py-1 border border-slate-300 rounded text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-[#E9472F] bg-white disabled:bg-slate-50 disabled:text-slate-400"
                       >
                         <option value="">— Not assigned —</option>
                         {VALID_EDITION_SECTIONS.map(s => (
@@ -358,7 +358,7 @@ export default function EditionEditorPage() {
                           onChange={e => handleOrderChange(post.id, parseInt(e.target.value, 10) || 0)}
                           disabled={isPublished}
                           title="Display order"
-                          className="w-14 px-2 py-1 border border-slate-300 rounded text-xs text-slate-700 text-center focus:outline-none focus:ring-1 focus:ring-[#EF462F] disabled:bg-slate-50 disabled:text-slate-400"
+                          className="w-14 px-2 py-1 border border-slate-300 rounded text-xs text-slate-700 text-center focus:outline-none focus:ring-1 focus:ring-[#E9472F] disabled:bg-slate-50 disabled:text-slate-400"
                         />
                       )}
                     </div>
@@ -383,7 +383,7 @@ export default function EditionEditorPage() {
                 <ul className="space-y-1">
                   {sectionPosts.map(post => (
                     <li key={post.id} className="text-sm text-slate-700 flex items-center gap-2">
-                      <span className="w-4 h-4 rounded-full bg-[#EF462F] text-white text-[9px] flex items-center justify-center flex-shrink-0">
+                      <span className="w-4 h-4 rounded-full bg-[#E9472F] text-white text-[9px] flex items-center justify-center flex-shrink-0">
                         {(assignments.find(a => a.post_id === post.id)?.display_order ?? 0) + 1}
                       </span>
                       {post.title}

@@ -222,7 +222,7 @@ export function renderDigestHtml(
 
   const headerBlock = `
     <tr>
-      <td style="background:linear-gradient(135deg,#EF462F,#38C6F4);padding:32px 24px;text-align:center;">
+      <td style="background:linear-gradient(135deg,#E9472F,#38C6F4);padding:32px 24px;text-align:center;">
         <p style="margin:0 0 4px 0;font-size:11px;font-weight:700;letter-spacing:0.12em;color:rgba(255,255,255,0.8);text-transform:uppercase;">Ironmark Intelligence</p>
         <h1 style="margin:0 0 8px 0;font-size:26px;font-weight:800;color:#ffffff;">Ignition Insider</h1>
         <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.85);">${editionLabel} &bull; ${weekRange}</p>
@@ -240,7 +240,7 @@ export function renderDigestHtml(
   const topSignalBlock = topSignal.length > 0 ? `
     <tr>
       <td style="padding:24px 24px 0 24px;">
-        <p style="margin:0 0 12px 0;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#EF462F;text-transform:uppercase;border-bottom:2px solid #EF462F;padding-bottom:6px;">Top Signal</p>
+        <p style="margin:0 0 12px 0;font-size:13px;font-weight:700;letter-spacing:0.06em;color:#E9472F;text-transform:uppercase;border-bottom:2px solid #E9472F;padding-bottom:6px;">Top Signal</p>
         <table width="100%" cellpadding="0" cellspacing="0">
           ${topSignal.map(postItemHtml).join('')}
         </table>
@@ -357,7 +357,7 @@ export function renderAlertHtml(post: InsiderPost, subscriberToken: string): str
   const unsubscribeUrl = `${appUrl}/insider/unsubscribe?token=${subscriberToken}&action=unsubscribe`;
   const postUrl = `${appUrl}/insider/posts/${post.slug}`;
 
-  const severityColor = post.relevance_score >= 9 ? '#EF462F' : '#f59e0b';
+  const severityColor = post.relevance_score >= 9 ? '#E9472F' : '#f59e0b';
   const severityLabel = post.relevance_score >= 9 ? 'HIGH' : 'ELEVATED';
 
   const sourceDate = new Date(post.source_date).toLocaleDateString('en-US', {
@@ -390,7 +390,7 @@ export function renderAlertHtml(post: InsiderPost, subscriberToken: string): str
         <p style="margin:0 0 4px 0;font-size:12px;color:#94a3b8;">Source: ${post.source_name} &bull; ${sourceDate}</p>
 
         <div style="margin-top:20px;">
-          <a href="${postUrl}" style="display:inline-block;background:#EF462F;color:#ffffff;text-decoration:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;">
+          <a href="${postUrl}" style="display:inline-block;background:#E9472F;color:#ffffff;text-decoration:none;padding:10px 24px;border-radius:6px;font-size:14px;font-weight:600;">
             Read Full Analysis
           </a>
         </div>
@@ -456,7 +456,7 @@ export function renderConfirmationHtml(email: string, token: string): string {
 
   const body = `
     <tr>
-      <td style="background:linear-gradient(135deg,#EF462F,#38C6F4);padding:32px 24px;text-align:center;">
+      <td style="background:linear-gradient(135deg,#E9472F,#38C6F4);padding:32px 24px;text-align:center;">
         <p style="margin:0 0 4px 0;font-size:11px;font-weight:700;letter-spacing:0.12em;color:rgba(255,255,255,0.8);text-transform:uppercase;">Welcome to</p>
         <h1 style="margin:0;font-size:26px;font-weight:800;color:#ffffff;">Ignition Insider</h1>
       </td>
@@ -470,7 +470,7 @@ export function renderConfirmationHtml(email: string, token: string): string {
           ${categoryListHtml}
         </ul>
         <div style="text-align:center;margin-top:24px;">
-          <a href="${manageUrl}" style="display:inline-block;background:#EF462F;color:#ffffff;text-decoration:none;padding:12px 32px;border-radius:6px;font-size:14px;font-weight:600;">
+          <a href="${manageUrl}" style="display:inline-block;background:#E9472F;color:#ffffff;text-decoration:none;padding:12px 32px;border-radius:6px;font-size:14px;font-weight:600;">
             Manage Preferences
           </a>
         </div>
