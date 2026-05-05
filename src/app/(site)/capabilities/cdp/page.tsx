@@ -3,14 +3,14 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { InternalLink } from '@/components/ui/InternalLink';
 
-export const metadata: Metadata = { title: 'Customer Data Platform' };
+export const metadata: Metadata = { title: 'CDP & Audience Builder' };
 
 export default function CdpPage() {
   return (
     <>
       <PageHeader
-        title="Customer Data Platform"
-        subtitle="Unified customer data from every system that touches a buyer — turned into an audience asset."
+        title="CDP & Audience Builder"
+        subtitle="Unified customer data from every system that touches a buyer — and the builder that turns it into activated audiences."
         status="phase2"
       />
 
@@ -67,7 +67,7 @@ export default function CdpPage() {
       {/* Cross-links */}
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/roi-reporting">The reporting foundation the CDP builds on</InternalLink>
-        <InternalLink href="/capabilities/campaign-management">How the CDP feeds Omni-Channel Campaigns</InternalLink>
+        <InternalLink href="/capabilities/campaign-management">How the CDP feeds Campaign Management</InternalLink>
         <InternalLink href="/insider">Latest CDP and data-platform intel</InternalLink>
       </div>
     </>

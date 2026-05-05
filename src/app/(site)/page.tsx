@@ -90,31 +90,31 @@ export default function HomePage() {
           href="/capabilities/iggy-ai"
         />
         <CapabilityCard
+          title="Campaign Management"
+          description="Print and digital orchestrated from one platform with unified attribution."
+          status="phase2"
+          href="/capabilities/campaign-management"
+        />
+        <CapabilityCard
           title="Dynamic AI Creative"
           description="AI-generated, brand-compliant creative localized for each location. Active development."
           status="phase2"
           href="/capabilities/dynamic-ai-creative"
         />
         <CapabilityCard
-          title="Customer Data Platform"
-          description="Unified customer data across CRM, POS, web, and ad platforms — the audience asset."
+          title="CDP & Audience Builder"
+          description="Unified customer data across CRM, POS, web, and ad platforms — turned into activated audiences."
           status="phase2"
           href="/capabilities/cdp"
         />
         <CapabilityCard
-          title="Omni-Channel Campaigns"
-          description="Print and digital orchestrated from one platform with unified attribution."
-          status="phase2"
-          href="/capabilities/campaign-management"
-        />
-        <CapabilityCard
-          title="Marketing Hub"
-          description="The front door for local operators — programs, co-op funds, brand-safe templates."
+          title="Distributed Marketing / DAM"
+          description="The front door for local operators — programs, co-op funds, brand-safe templates, asset library."
           status="phase3"
           href="/capabilities/marketing-hub"
         />
         <CapabilityCard
-          title="Full-Funnel Automation"
+          title="Full-funnel & Automation"
           description="Trigger-based workflows, lead nurturing, and conversion optimization."
           status="phase3"
           href="/capabilities/full-funnel-automation"
@@ -177,8 +177,8 @@ const ROADMAP_PHASES = [
     summary:
       'Activation. Reporting becomes a data asset; insights become campaigns. Switching costs start to compound as customer data and audience segments accumulate inside Ignition.',
     themes: [
-      'Customer Data Platform',
-      'Omni-Channel Campaign Management',
+      'Campaign Management',
+      'CDP & Audience Builder',
     ],
   },
   {
@@ -190,8 +190,8 @@ const ROADMAP_PHASES = [
     summary:
       'Operating system. Ignition becomes the daily marketing workspace for the brand and its local operators — the front door, the funnel, and the automation engine.',
     themes: [
-      'Distributed Marketing Hub & Brand Asset Management',
-      'Full-Funnel Marketing & Automation',
+      'Distributed Marketing / DAM',
+      'Full-funnel & Automation',
     ],
   },
 ];

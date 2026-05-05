@@ -64,8 +64,8 @@ export default function DynamicAiCreativePage() {
       </p>
       <p className="text-brand-gray leading-relaxed mb-8">
         This is also the capability that opens the door to Phase 2. With AI creative as a
-        proven feedback loop, the case for a Customer Data Platform and orchestrated
-        omni-channel campaigns becomes self-evident — the platform isn&apos;t just measuring
+        proven feedback loop, the case for a CDP and orchestrated
+        campaigns becomes self-evident — the platform isn&apos;t just measuring
         the work, it&apos;s producing it.
       </p>
 

@@ -3,14 +3,14 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { InternalLink } from '@/components/ui/InternalLink';
 
-export const metadata: Metadata = { title: 'Distributed Marketing Hub' };
+export const metadata: Metadata = { title: 'Distributed Marketing / DAM' };
 
 export default function MarketingHubPage() {
   return (
     <>
       <PageHeader
-        title="Distributed Marketing Hub & Brand Asset Management"
-        subtitle="The front door for local operators — programs, co-op funds, brand-safe templates, AI recommendations."
+        title="Distributed Marketing / DAM"
+        subtitle="The front door for local operators — programs, co-op funds, brand-safe templates, AI recommendations, and the brand asset library that powers it all."
         status="phase3"
       />
 

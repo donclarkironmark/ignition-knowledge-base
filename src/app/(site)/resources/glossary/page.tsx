@@ -21,7 +21,7 @@ const GLOSSARY_TERMS = [
     term: 'Campaign Kit',
     definition:
       'A pre-configured campaign package with channel mix, creative templates, audience targeting, and budget defaults baked in. Brand HQ assembles the kit; local operators launch it with one click and minimal customization.',
-    context: 'Omni-Channel Campaigns, Marketing Hub',
+    context: 'Campaign Management, Marketing Hub',
   },
   {
     term: 'CDP',

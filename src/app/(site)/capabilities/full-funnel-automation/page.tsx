@@ -3,13 +3,13 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { InternalLink } from '@/components/ui/InternalLink';
 
-export const metadata: Metadata = { title: 'Full-Funnel Marketing & Automation' };
+export const metadata: Metadata = { title: 'Full-funnel & Automation' };
 
 export default function FullFunnelAutomationPage() {
   return (
     <>
       <PageHeader
-        title="Full-Funnel Marketing & Automation"
+        title="Full-funnel & Automation"
         subtitle="Trigger-based workflows, lead nurturing, and conversion catalysts embedded into daily operations."
         status="phase3"
       />
@@ -24,8 +24,8 @@ export default function FullFunnelAutomationPage() {
         customers that nobody reactivates.
       </p>
       <p className="text-brand-gray leading-relaxed mb-6">
-        Full-Funnel Automation is the layer that closes the loop. Triggers fire from the same
-        Customer Data Platform that powers campaigns; workflows execute through the same
+        This is the layer that closes the loop. Triggers fire from the same
+        CDP that powers campaigns; workflows execute through the same
         channels that ship the creative; results feed back into the same reports. One platform,
         end to end.
       </p>
@@ -54,14 +54,14 @@ export default function FullFunnelAutomationPage() {
         This is the capability that closes the upsell ladder. ROI Reporting opens the door;
         Iggy proves the platform thinks; Dynamic AI Creative cuts the production bottleneck;
         CDP turns data into asset; Campaign Management turns asset into action; Marketing Hub
-        brings local operators in; Full-Funnel Automation makes the whole thing run on its own.
+        brings local operators in; the automation layer makes the whole thing run on its own.
       </p>
 
       {/* Status callout */}
       <div className="rounded-lg border border-gray-200 bg-gray-50 p-5 mb-8">
         <p className="text-sm font-semibold text-gray-700 mb-1">Phase 3 — 2027 and beyond</p>
         <p className="text-sm text-gray-600">
-          Full-Funnel Automation is the last theme on the public roadmap. It&apos;s
+          This is the last theme on the public roadmap. It&apos;s
           directionally committed but depends on the data, creative, and campaign layers being
           mature first. Use as platform vision, not near-term scope.
         </p>

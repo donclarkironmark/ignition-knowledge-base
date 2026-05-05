@@ -3,13 +3,13 @@ import { PageHeader } from '@/components/ui/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { InternalLink } from '@/components/ui/InternalLink';
 
-export const metadata: Metadata = { title: 'Omni-Channel Campaign Management' };
+export const metadata: Metadata = { title: 'Campaign Management' };
 
 export default function CampaignManagementPage() {
   return (
     <>
       <PageHeader
-        title="Omni-Channel Campaign Management"
+        title="Campaign Management"
         subtitle="Print and digital orchestrated from one platform with unified attribution."
         status="phase2"
       />
@@ -23,7 +23,7 @@ export default function CampaignManagementPage() {
         together monthly. Every channel optimizes itself. Nobody optimizes the customer.
       </p>
       <p className="text-brand-gray leading-relaxed mb-6">
-        Omni-Channel Campaign Management collapses the orchestration layer into one workspace,
+        Campaign Management collapses the orchestration layer into one workspace,
         with the data layer (CDP) feeding audiences and the reporting layer measuring outcomes
         — across paid digital, owned channels, and physical mail.
       </p>
@@ -87,7 +87,7 @@ const FEATURES = [
   {
     title: 'CDP-Powered Targeting',
     description:
-      'Pull audiences directly from Customer Data Platform segments. No re-uploading lists per channel; no audience drift between platforms; no rebuilding for every campaign.',
+      'Pull audiences directly from CDP segments. No re-uploading lists per channel; no audience drift between platforms; no rebuilding for every campaign.',
   },
   {
     title: 'AI Automation Rules',

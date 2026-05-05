@@ -23,7 +23,7 @@ Internal product marketing website for Ironmark's Ignition platform. Audience: s
 
 ## Content Structure (3 nav sections)
 - **Intel & Insights**: Feed (`/insider`), Editions (`/insider/editions`), Admin (`/insider/admin`) — Supabase-backed, populated by Claude Code Routines + manual admin entry. Replaces the old static Competitive Positioning page — competitive intel now lives here.
-- **Capabilities** (one page per roadmap theme): ROI Reporting (live), Iggy AI (live), Dynamic AI Creative (Phase 1, in dev), CDP (Phase 2), Omni-Channel Campaigns (Phase 2), Marketing Hub (Phase 3), Full-Funnel Automation (Phase 3)
+- **Capabilities** (one page per roadmap theme): ROI-Based Reporting (live), Iggy AI Insights Agent (live), Campaign Management (Phase 2), Dynamic AI Creative (Phase 2, in dev), CDP & Audience Builder (Phase 2), Distributed Marketing / DAM (Phase 3), Full-funnel & Automation (Phase 3)
 - **Resources**: Demo Guide, Glossary, Help Guides (Tango-embed walkthroughs)
 
 > Removed/moved in prior IA refactors: `/platform/*` and `/verticals/*` (deleted), `/capabilities` overview (deleted), all `/competitive` paths (deleted — content was static and stale; redirects to `/insider`). Old URLs 301-redirect via `next.config.ts`.
