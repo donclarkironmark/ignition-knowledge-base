@@ -23,14 +23,15 @@ Internal product marketing website for Ironmark's Ignition platform. Audience: s
 
 ## Content Structure (3 nav sections)
 - **Intel & Insights**: Feed (`/insider`), Editions (`/insider/editions`), Admin (`/insider/admin`) — Supabase-backed, populated by Claude Code Routines + manual admin entry
-- **Capabilities**: Overview (all 7 tiered), ROI Reporting (live), Iggy AI (live), Competitive Positioning
-- **Resources**: Demo Guide, Glossary, Help Guides (Tango-embed walkthroughs)
+- **Capabilities** (one page per roadmap theme): ROI Reporting (live), Iggy AI (live), Dynamic AI Creative (Phase 1, in dev), CDP (Phase 2), Omni-Channel Campaigns (Phase 2), Marketing Hub (Phase 3), Full-Funnel Automation (Phase 3)
+- **Resources**: Demo Guide, Competitive Positioning, Glossary, Help Guides (Tango-embed walkthroughs)
 
-> Removed in the IA simplification: `/platform/*` and `/verticals/*` (deleted), `/competitive` (moved to `/capabilities/competitive`). Old URLs 301-redirect via `next.config.ts`.
+> Removed/moved in prior IA refactors: `/platform/*` and `/verticals/*` (deleted), `/capabilities` overview (deleted), `/competitive` (moved to `/resources/competitive` via `/capabilities/competitive` redirect). Old URLs 301-redirect via `next.config.ts`.
 
 ## Content Rules
 - NO pricing, revenue, ARR targets, or financial details anywhere
-- Competitors named only on `/capabilities/competitive` and inside the Intel & Insights feed; generic references elsewhere
+- NO specific customer names or counts (e.g., "TJC live", "9 MVP brands"); describe what the capabilities do
+- Competitors named only on `/resources/competitive` and inside the Intel & Insights feed; generic references elsewhere
 - Capability status: LIVE (green) / PHASE 2 (amber) / PHASE 3 (gray)
 - Phase labels, not quarter-based timelines (avoids credibility risk when dates slip)
 

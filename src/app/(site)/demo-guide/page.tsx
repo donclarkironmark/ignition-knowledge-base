@@ -78,7 +78,7 @@ export default function DemoGuidePage() {
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/roi-reporting">Review ROI Reporting before your demo</InternalLink>
         <InternalLink href="/capabilities/iggy-ai">Review Iggy AI before your demo</InternalLink>
-        <InternalLink href="/capabilities/competitive">Review competitive positioning</InternalLink>
+        <InternalLink href="/resources/competitive">Review competitive positioning</InternalLink>
         <InternalLink href="/insider">Check today&apos;s competitive intel feed</InternalLink>
       </div>
     </>
@@ -86,11 +86,12 @@ export default function DemoGuidePage() {
 }
 
 const PREP_ITEMS = [
-  "Know the prospect's vertical and adjust your terminology accordingly — use the vertical pages in this Knowledge Base as reference",
+  "Know the prospect's vertical and adjust terminology accordingly — clinic, dealership, branch, restaurant, store",
   'Know their current marketing setup: agency, in-house team, what tools they use today',
   'Know their location count and structure (corporate, regional, local levels)',
   "Have 2-3 specific scenarios ready using their vertical's language — not generic marketing examples",
-  'If you know they use a competitor platform, review the competitive positioning page for talk tracks',
+  'If you know they use a competitor platform, review the Competitive Positioning page for talk tracks',
+  "Skim today's Intel & Insights feed — fresh news on their competitor or category often lands in conversation",
 ];
 
 const DEMO_STEPS = [

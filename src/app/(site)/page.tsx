@@ -18,10 +18,10 @@ export default function HomePage() {
 
       {/* Hero sentence + CTAs */}
       <p className="text-base text-brand-gray leading-relaxed mb-6 max-w-3xl">
-        Ignition connects brand strategy to local execution for multilocation brands — and
-        proves it works with real revenue data. Use this site to learn the platform, prepare
-        for customer conversations, and stay current on what&apos;s live and what&apos;s
-        coming.
+        Ignition turns marketing spend into measurable revenue for multi-location brands. Reporting,
+        AI insights, and creative automation that compound — each capability shipped builds on the
+        last. Use this site to learn the platform, prepare for customer conversations, and stay
+        current on what&apos;s live and what&apos;s next.
       </p>
 
       <div className="flex flex-wrap gap-3 mb-12">
@@ -32,37 +32,49 @@ export default function HomePage() {
           Today&apos;s Intel
         </Link>
         <Link
-          href="/capabilities"
+          href="/capabilities/roi-reporting"
           className="inline-flex items-center rounded-md border border-brand-cyan text-brand-cyan px-5 py-2.5 text-sm font-semibold hover:bg-brand-cyan/5 transition-colors"
         >
           See What&apos;s Live
         </Link>
       </div>
 
-      {/* What's New */}
-      <SectionHeading>What&apos;s New</SectionHeading>
-      <div className="mb-12 space-y-4">
-        {WHATS_NEW.map((entry) => (
+      {/* Roadmap */}
+      <SectionHeading>Roadmap at a glance</SectionHeading>
+      <p className="text-sm text-brand-gray mb-6 max-w-3xl">
+        Three compounding phases. Reporting feeds AI. AI feeds creative. Creative feeds campaigns.
+        Campaigns feed automation. Each phase makes the next one stronger.
+      </p>
+      <div className="space-y-4 mb-12">
+        {ROADMAP_PHASES.map((phase) => (
           <div
-            key={entry.title}
-            className="flex gap-4 rounded-lg border border-brand-border bg-white px-5 py-4"
+            key={phase.label}
+            className={`rounded-lg border bg-white p-5 ${phase.borderClass}`}
           >
-            <span className="shrink-0 text-xs font-medium text-brand-gray whitespace-nowrap pt-0.5">
-              {entry.date}
-            </span>
-            <div>
-              <p className="text-sm font-semibold text-foreground">{entry.title}</p>
-              <p className="text-sm text-brand-gray mt-0.5">{entry.description}</p>
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+              <h3 className="text-base font-semibold text-foreground">{phase.label}</h3>
+              <span className={`text-xs font-semibold uppercase tracking-wider ${phase.tagClass}`}>
+                {phase.tag}
+              </span>
+              <span className="text-xs text-brand-gray">{phase.timeframe}</span>
             </div>
+            <p className="text-sm text-brand-gray leading-relaxed mb-3">{phase.summary}</p>
+            <ul className="text-sm text-brand-gray space-y-1">
+              {phase.themes.map((theme) => (
+                <li key={theme} className="flex gap-2">
+                  <span className={`shrink-0 ${phase.tagClass}`}>&#8226;</span>
+                  <span>{theme}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
 
-      {/* Platform Status Dashboard */}
-      <SectionHeading>Platform Status</SectionHeading>
+      {/* Capability Status */}
+      <SectionHeading>Capability status</SectionHeading>
       <p className="text-sm text-brand-gray mb-4">
-        Seven capability themes across three compounding phases. Here&apos;s where
-        everything stands today.
+        Seven capability themes. Click any card to drop into the deep-dive page.
       </p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-12">
         <CapabilityCard
@@ -79,38 +91,38 @@ export default function HomePage() {
         />
         <CapabilityCard
           title="Dynamic AI Creative"
-          description="AI-generated, brand-compliant creative assets localized for each location."
+          description="AI-generated, brand-compliant creative localized for each location. Active development."
           status="phase2"
-          href="/capabilities#phase-2"
+          href="/capabilities/dynamic-ai-creative"
         />
         <CapabilityCard
           title="Customer Data Platform"
-          description="Unified customer data from CRM, POS, web analytics, and ad platforms."
+          description="Unified customer data across CRM, POS, web, and ad platforms — the audience asset."
           status="phase2"
-          href="/capabilities#phase-2"
+          href="/capabilities/cdp"
         />
         <CapabilityCard
-          title="Campaign Management"
-          description="Print and digital campaigns orchestrated from one platform with unified attribution."
+          title="Omni-Channel Campaigns"
+          description="Print and digital orchestrated from one platform with unified attribution."
           status="phase2"
-          href="/capabilities#phase-2"
+          href="/capabilities/campaign-management"
         />
         <CapabilityCard
           title="Marketing Hub"
-          description="The front door for local operators — curated programs, co-op funds, and brand-safe templates."
+          description="The front door for local operators — programs, co-op funds, brand-safe templates."
           status="phase3"
-          href="/capabilities#phase-3"
+          href="/capabilities/marketing-hub"
         />
         <CapabilityCard
           title="Full-Funnel Automation"
           description="Trigger-based workflows, lead nurturing, and conversion optimization."
           status="phase3"
-          href="/capabilities#phase-3"
+          href="/capabilities/full-funnel-automation"
         />
       </div>
 
       {/* Quick Links */}
-      <SectionHeading>Quick Links</SectionHeading>
+      <SectionHeading>Quick links</SectionHeading>
       <div className="grid gap-4 sm:grid-cols-2 mb-6">
         <QuickLinkCard
           title="Intel & Insights Feed"
@@ -121,7 +133,7 @@ export default function HomePage() {
         <QuickLinkCard
           title="Competitive Positioning"
           description="Head-to-head comparisons, capability matrix, and talk tracks for common competitive situations."
-          href="/capabilities/competitive"
+          href="/resources/competitive"
           icon={<Swords className="w-6 h-6" />}
         />
         <QuickLinkCard
@@ -141,29 +153,45 @@ export default function HomePage() {
   );
 }
 
-const WHATS_NEW = [
+const ROADMAP_PHASES = [
   {
-    date: 'Feb 2026',
-    title: 'The Joint Chiropractic goes live on ROI Reporting',
-    description:
-      '900+ clinic locations now running on Ignition with daily campaign performance data and real revenue attribution.',
+    label: 'Phase 1 — Build & Launch',
+    tag: 'In market',
+    tagClass: 'text-emerald-600',
+    borderClass: 'border-brand-border border-l-4 border-l-emerald-500',
+    timeframe: 'Q4 2025 – Q4 2026',
+    summary:
+      'The foundation: visibility into spend and revenue, plus AI that turns that data into action. Two capabilities are live in production today; a third is in active development.',
+    themes: [
+      'ROI-Based Reporting — live',
+      'Iggy AI Insights Agent — live',
+      'Dynamic AI Creative — in development',
+    ],
   },
   {
-    date: 'Feb 2026',
-    title: 'Iggy Notebook launches',
-    description:
-      'Ask natural language questions and get visual reports with metrics, charts, tables, and insights — saveable and PDF-exportable.',
+    label: 'Phase 2 — Expand & Validate',
+    tag: 'Next',
+    tagClass: 'text-amber-600',
+    borderClass: 'border-brand-border border-l-4 border-l-amber-400',
+    timeframe: 'Q3 2026 – Q4 2026',
+    summary:
+      'Activation. Reporting becomes a data asset; insights become campaigns. Switching costs start to compound as customer data and audience segments accumulate inside Ignition.',
+    themes: [
+      'Customer Data Platform',
+      'Omni-Channel Campaign Management',
+    ],
   },
   {
-    date: 'Mar 2026',
-    title: "Domino's onboarding begins",
-    description:
-      'First QSR customer enters onboarding. QSR-specific campaign kits designed for the platform.',
-  },
-  {
-    date: 'Mar 2026',
-    title: 'Knowledge Base launched',
-    description:
-      'Your internal guide to understanding, explaining, and selling Ignition. You\'re looking at it right now.',
+    label: 'Phase 3 — Scale & Embed',
+    tag: 'Later',
+    tagClass: 'text-gray-500',
+    borderClass: 'border-brand-border border-l-4 border-l-gray-400',
+    timeframe: '2027+',
+    summary:
+      'Operating system. Ignition becomes the daily marketing workspace for the brand and its local operators — the front door, the funnel, and the automation engine.',
+    themes: [
+      'Distributed Marketing Hub & Brand Asset Management',
+      'Full-Funnel Marketing & Automation',
+    ],
   },
 ];

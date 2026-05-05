@@ -5,6 +5,8 @@ import { InternalLink } from '@/components/ui/InternalLink';
 
 export const metadata: Metadata = { title: 'ROI-Based Reporting' };
 
+// Supabase-backed pages elsewhere are dynamic; static capability pages can prerender.
+
 export default function RoiReportingPage() {
   return (
     <>
@@ -17,7 +19,7 @@ export default function RoiReportingPage() {
       {/* Section A: Problem */}
       <SectionHeading>Marketing spend without marketing proof</SectionHeading>
       <p className="text-brand-gray leading-relaxed mb-4">
-        Multilocation brands spend heavily on marketing, but most cannot connect that spend
+        Multi-location brands spend heavily on marketing, but most cannot connect that spend
         to revenue at the location level. The monthly PDF from the agency shows impressions
         and clicks — not business outcomes. Everything is aggregated at the brand level, so
         nobody can identify which locations are driving returns and which are wasting budget.
@@ -52,7 +54,7 @@ export default function RoiReportingPage() {
         </li>
         <li className="flex gap-2">
           <span className="text-brand-cyan font-bold shrink-0">&#8226;</span>
-          <span><strong className="text-foreground">Franchise operators</strong> who want to know if their marketing dollars are paying off at their specific location</span>
+          <span><strong className="text-foreground">Franchise and multi-unit operators</strong> who want to know if marketing dollars are paying off at their specific location</span>
         </li>
       </ul>
       <p className="text-sm text-brand-gray leading-relaxed mb-6">
@@ -70,29 +72,19 @@ export default function RoiReportingPage() {
       <p className="text-brand-gray leading-relaxed mb-4">
         Once reporting lives in Ignition, switching costs increase. The data history, the
         benchmarks, the location-level insights — all of it compounds over time. ROI
-        Reporting opens the upsell path to Iggy AI, then to the full platform.
+        Reporting opens the upsell path to Iggy AI, then to Dynamic AI Creative, then to
+        the full platform.
       </p>
-      <p className="text-sm text-brand-gray leading-relaxed mb-6 italic">
+      <p className="text-sm text-brand-gray leading-relaxed mb-8 italic">
         Think of it as the entry point: easy to sell, fast to deploy, and the foundation
         everything else builds on.
       </p>
 
-      {/* Section E: Proof Point */}
-      <SectionHeading>Live in production</SectionHeading>
-      <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-5 mb-8">
-        <p className="text-sm font-semibold text-emerald-800 mb-1">The Joint Chiropractic</p>
-        <p className="text-sm text-emerald-700">
-          900+ clinic locations live on Ignition as of February 2026. Daily campaign
-          performance data across every location with real revenue attribution — not just
-          clicks and impressions. The largest deployment on the Ignition platform.
-        </p>
-      </div>
-
       {/* Cross-links */}
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/iggy-ai">See how Iggy turns dashboard data into actionable insights</InternalLink>
-        <InternalLink href="/capabilities">See all platform capabilities</InternalLink>
-        <InternalLink href="/capabilities/competitive">See how ROI Reporting compares to alternatives</InternalLink>
+        <InternalLink href="/resources/competitive">How ROI Reporting compares to alternatives</InternalLink>
+        <InternalLink href="/insider">Latest competitive intel on the reporting category</InternalLink>
       </div>
     </>
   );
@@ -112,11 +104,11 @@ const FEATURES = [
   {
     title: 'Multi-Tenant Views',
     description:
-      'Network, region, and individual location dashboards in one system. Brand HQ sees the whole picture. A regional manager sees their territory. A franchise operator sees their location. Same data, right perspective.',
+      'Network, region, and individual location dashboards in one system. Brand HQ sees the whole picture. A regional manager sees their territory. A local operator sees their location. Same data, right perspective for each role.',
   },
   {
     title: 'Daily Performance Metrics',
     description:
-      'Campaign performance by platform with 7 timeframe options. Not monthly. Not weekly. Daily. When something changes, you see it the next morning — not in next month\'s PDF.',
+      'Campaign performance by platform with seven timeframe options. Not monthly. Not weekly. Daily. When something changes, you see it the next morning — not in next month\'s PDF.',
   },
 ];

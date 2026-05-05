@@ -17,11 +17,14 @@ const nextConfig: NextConfig = {
   // Suppress hydration warnings from browser extensions
   reactStrictMode: true,
 
-  // Preserve old URLs from the pre-IA-simplification site
+  // Preserve old URLs from prior IA refactors
   async redirects() {
     return [
-      // Competitive Positioning moved under Capabilities
-      { source: "/competitive", destination: "/capabilities/competitive", permanent: true },
+      // Competitive Positioning lives under Resources (was under Capabilities, was top-level)
+      { source: "/competitive", destination: "/resources/competitive", permanent: true },
+      { source: "/capabilities/competitive", destination: "/resources/competitive", permanent: true },
+      // Capabilities overview retired — send to ROI Reporting (the entry-point capability)
+      { source: "/capabilities", destination: "/capabilities/roi-reporting", permanent: true },
       // Platform + Industries sections retired — send any saved links home
       { source: "/platform", destination: "/", permanent: true },
       { source: "/platform/:path*", destination: "/", permanent: true },

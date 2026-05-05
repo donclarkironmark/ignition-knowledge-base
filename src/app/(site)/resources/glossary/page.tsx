@@ -12,9 +12,21 @@ const GLOSSARY_TERMS = [
     context: 'ROI Reporting, Iggy AI',
   },
   {
+    term: 'Brand Guardrails',
+    definition:
+      'Rules that constrain AI-generated creative output: tone of voice, required disclaimers, prohibited claims, font and color systems, logo treatment. Treated as hard constraints — outputs that violate the rulebook are rejected and regenerated, not flagged for human review.',
+    context: 'Dynamic AI Creative',
+  },
+  {
+    term: 'Campaign Kit',
+    definition:
+      'A pre-configured campaign package with channel mix, creative templates, audience targeting, and budget defaults baked in. Brand HQ assembles the kit; local operators launch it with one click and minimal customization.',
+    context: 'Omni-Channel Campaigns, Marketing Hub',
+  },
+  {
     term: 'CDP',
     definition:
-      'Customer Data Platform. A system that unifies customer data from multiple sources (CRM, POS, ad platforms, web analytics) into a single, usable view. Eliminates data silos and enables precision targeting.',
+      'Customer Data Platform. A system that unifies customer data from multiple sources (CRM, POS, ad platforms, web analytics, even direct mail response cards) into a single profile per customer. The data layer that turns fragmented marketing signals into an audience asset.',
     context: 'Phase 2 capability',
   },
   {
@@ -40,6 +52,12 @@ const GLOSSARY_TERMS = [
     definition:
       'Automotive industry term for the service and parts departments at a dealership. Called "fixed" because the revenue is more predictable than variable vehicle sales. Higher margins than vehicle sales but often under-marketed.',
     context: 'Automotive vertical',
+  },
+  {
+    term: 'Identity Resolution',
+    definition:
+      'The process of recognizing the same customer across email, phone, device IDs, loyalty number, and household — resolving multiple signals to one person. Foundational to a CDP: every downstream segment, model, and activation depends on knowing who the same person actually is.',
+    context: 'CDP',
   },
   {
     term: 'Iggy',
@@ -70,6 +88,12 @@ const GLOSSARY_TERMS = [
     definition:
       'A feature where natural language questions become visual reports with metrics, charts, tables, and narrative insights. Reports are saveable, re-runnable, and exportable as PDF. Turns ad-hoc questions into reusable reporting assets.',
     context: 'Iggy AI capability',
+  },
+  {
+    term: 'Predictive Segmentation',
+    definition:
+      'Audience segments built from forward-looking models — churn risk, upsell readiness, lifetime value tier, lapsed-customer windows — rather than just descriptive criteria. Anticipates the next move instead of describing the last one.',
+    context: 'CDP',
   },
   {
     term: 'RBAC',

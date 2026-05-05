@@ -23,16 +23,20 @@ export const NAV_SECTIONS: NavSection[] = [
   {
     heading: 'Capabilities',
     items: [
-      { label: 'Overview', path: '/capabilities' },
       { label: 'ROI-Based Reporting', path: '/capabilities/roi-reporting', status: 'live' },
       { label: 'Iggy AI Insights Agent', path: '/capabilities/iggy-ai', status: 'live' },
-      { label: 'Competitive Positioning', path: '/capabilities/competitive' },
+      { label: 'Dynamic AI Creative', path: '/capabilities/dynamic-ai-creative', status: 'phase2' },
+      { label: 'Customer Data Platform', path: '/capabilities/cdp', status: 'phase2' },
+      { label: 'Omni-Channel Campaigns', path: '/capabilities/campaign-management', status: 'phase2' },
+      { label: 'Marketing Hub', path: '/capabilities/marketing-hub', status: 'phase3' },
+      { label: 'Full-Funnel Automation', path: '/capabilities/full-funnel-automation', status: 'phase3' },
     ],
   },
   {
     heading: 'Resources',
     items: [
       { label: 'Demo Guide', path: '/demo-guide' },
+      { label: 'Competitive Positioning', path: '/resources/competitive' },
       { label: 'Glossary', path: '/resources/glossary' },
       { label: 'Help Guides', path: '/resources/help-guides' },
     ],

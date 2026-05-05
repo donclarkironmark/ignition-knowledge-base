@@ -133,7 +133,7 @@ export default function IggyAiPage() {
       {/* Cross-links */}
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/roi-reporting">Iggy works on top of your ROI data — see ROI Reporting</InternalLink>
-        <InternalLink href="/capabilities">See all platform capabilities</InternalLink>
+        <InternalLink href="/capabilities/dynamic-ai-creative">What Iggy enables next — Dynamic AI Creative</InternalLink>
         <InternalLink href="/demo-guide">Learn how to demo Iggy effectively</InternalLink>
       </div>
     </>
