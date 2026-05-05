@@ -15,8 +15,8 @@ export const NAV_SECTIONS: NavSection[] = [
   {
     heading: 'Intel & Insights',
     items: [
-      { label: 'Feed', path: '/insider', status: 'live' },
-      { label: 'Editions', path: '/insider/editions', status: 'live' },
+      { label: 'Feed', path: '/insider' },
+      { label: 'Editions', path: '/insider/editions' },
       { label: 'Admin', path: '/insider/admin' },
     ],
   },
@@ -25,11 +25,11 @@ export const NAV_SECTIONS: NavSection[] = [
     items: [
       { label: 'ROI-Based Reporting', path: '/capabilities/roi-reporting', status: 'live' },
       { label: 'Iggy AI Insights Agent', path: '/capabilities/iggy-ai', status: 'live' },
+      { label: 'Campaign Management', path: '/capabilities/campaign-management', status: 'phase2' },
       { label: 'Dynamic AI Creative', path: '/capabilities/dynamic-ai-creative', status: 'phase2' },
-      { label: 'Customer Data Platform', path: '/capabilities/cdp', status: 'phase2' },
-      { label: 'Omni-Channel Campaigns', path: '/capabilities/campaign-management', status: 'phase2' },
-      { label: 'Marketing Hub', path: '/capabilities/marketing-hub', status: 'phase3' },
-      { label: 'Full-Funnel Automation', path: '/capabilities/full-funnel-automation', status: 'phase3' },
+      { label: 'CDP & Audience Builder', path: '/capabilities/cdp', status: 'phase2' },
+      { label: 'Distributed Marketing/DAM', path: '/capabilities/marketing-hub', status: 'phase3' },
+      { label: 'Full-funnel & Automation', path: '/capabilities/full-funnel-automation', status: 'phase3' },
     ],
   },
   {
