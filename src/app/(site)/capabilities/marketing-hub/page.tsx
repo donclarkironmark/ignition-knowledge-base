@@ -71,7 +71,7 @@ export default function MarketingHubPage() {
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/campaign-management">The campaigns local operators run</InternalLink>
         <InternalLink href="/capabilities/full-funnel-automation">The automation layer for local operations</InternalLink>
-        <InternalLink href="/resources/competitive">How the Hub differentiates from co-op portals</InternalLink>
+        <InternalLink href="/insider">Latest intel on co-op portals and partner-marketing tools</InternalLink>
       </div>
     </>
   );

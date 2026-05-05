@@ -20,9 +20,10 @@ const nextConfig: NextConfig = {
   // Preserve old URLs from prior IA refactors
   async redirects() {
     return [
-      // Competitive Positioning lives under Resources (was under Capabilities, was top-level)
-      { source: "/competitive", destination: "/resources/competitive", permanent: true },
-      { source: "/capabilities/competitive", destination: "/resources/competitive", permanent: true },
+      // Static Competitive Positioning page retired — competitive intel now lives in Intel & Insights
+      { source: "/competitive", destination: "/insider", permanent: true },
+      { source: "/capabilities/competitive", destination: "/insider", permanent: true },
+      { source: "/resources/competitive", destination: "/insider", permanent: true },
       // Capabilities overview retired — send to ROI Reporting (the entry-point capability)
       { source: "/capabilities", destination: "/capabilities/roi-reporting", permanent: true },
       // Platform + Industries sections retired — send any saved links home

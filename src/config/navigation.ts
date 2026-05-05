@@ -36,7 +36,6 @@ export const NAV_SECTIONS: NavSection[] = [
     heading: 'Resources',
     items: [
       { label: 'Demo Guide', path: '/demo-guide' },
-      { label: 'Competitive Positioning', path: '/resources/competitive' },
       { label: 'Glossary', path: '/resources/glossary' },
       { label: 'Help Guides', path: '/resources/help-guides' },
     ],

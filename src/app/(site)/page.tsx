@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Newspaper, Swords, Presentation, BookOpen } from 'lucide-react';
+import { Newspaper, Sparkles, Presentation, BookOpen } from 'lucide-react';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { CapabilityCard } from '@/components/ui/CapabilityCard';
 import { QuickLinkCard } from '@/components/ui/QuickLinkCard';
@@ -131,10 +131,10 @@ export default function HomePage() {
           icon={<Newspaper className="w-6 h-6" />}
         />
         <QuickLinkCard
-          title="Competitive Positioning"
-          description="Head-to-head comparisons, capability matrix, and talk tracks for common competitive situations."
-          href="/resources/competitive"
-          icon={<Swords className="w-6 h-6" />}
+          title="Iggy AI Insights Agent"
+          description="The AI that reasons over live campaign data — proactive alerts, conversational Q&A, and visual reports on demand."
+          href="/capabilities/iggy-ai"
+          icon={<Sparkles className="w-6 h-6" />}
         />
         <QuickLinkCard
           title="Demo Guide"

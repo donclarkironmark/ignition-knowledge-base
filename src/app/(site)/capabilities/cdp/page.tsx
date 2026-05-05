@@ -68,7 +68,7 @@ export default function CdpPage() {
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/roi-reporting">The reporting foundation the CDP builds on</InternalLink>
         <InternalLink href="/capabilities/campaign-management">How the CDP feeds Omni-Channel Campaigns</InternalLink>
-        <InternalLink href="/resources/competitive">How a real CDP differs from a "data warehouse"</InternalLink>
+        <InternalLink href="/insider">Latest CDP and data-platform intel</InternalLink>
       </div>
     </>
   );

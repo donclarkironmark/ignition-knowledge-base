@@ -22,16 +22,16 @@ Internal product marketing website for Ironmark's Ignition platform. Audience: s
 - Brand tokens in `src/styles/brand.ts`
 
 ## Content Structure (3 nav sections)
-- **Intel & Insights**: Feed (`/insider`), Editions (`/insider/editions`), Admin (`/insider/admin`) — Supabase-backed, populated by Claude Code Routines + manual admin entry
+- **Intel & Insights**: Feed (`/insider`), Editions (`/insider/editions`), Admin (`/insider/admin`) — Supabase-backed, populated by Claude Code Routines + manual admin entry. Replaces the old static Competitive Positioning page — competitive intel now lives here.
 - **Capabilities** (one page per roadmap theme): ROI Reporting (live), Iggy AI (live), Dynamic AI Creative (Phase 1, in dev), CDP (Phase 2), Omni-Channel Campaigns (Phase 2), Marketing Hub (Phase 3), Full-Funnel Automation (Phase 3)
-- **Resources**: Demo Guide, Competitive Positioning, Glossary, Help Guides (Tango-embed walkthroughs)
+- **Resources**: Demo Guide, Glossary, Help Guides (Tango-embed walkthroughs)
 
-> Removed/moved in prior IA refactors: `/platform/*` and `/verticals/*` (deleted), `/capabilities` overview (deleted), `/competitive` (moved to `/resources/competitive` via `/capabilities/competitive` redirect). Old URLs 301-redirect via `next.config.ts`.
+> Removed/moved in prior IA refactors: `/platform/*` and `/verticals/*` (deleted), `/capabilities` overview (deleted), all `/competitive` paths (deleted — content was static and stale; redirects to `/insider`). Old URLs 301-redirect via `next.config.ts`.
 
 ## Content Rules
 - NO pricing, revenue, ARR targets, or financial details anywhere
 - NO specific customer names or counts (e.g., "TJC live", "9 MVP brands"); describe what the capabilities do
-- Competitors named only on `/resources/competitive` and inside the Intel & Insights feed; generic references elsewhere
+- Competitors named only inside the Intel & Insights feed; generic references elsewhere
 - Capability status: LIVE (green) / PHASE 2 (amber) / PHASE 3 (gray)
 - Phase labels, not quarter-based timelines (avoids credibility risk when dates slip)
 

@@ -83,7 +83,7 @@ export default function DynamicAiCreativePage() {
       <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-brand-border">
         <InternalLink href="/capabilities/iggy-ai">How Iggy feeds Dynamic AI Creative</InternalLink>
         <InternalLink href="/capabilities/cdp">The data layer that makes localization sharper</InternalLink>
-        <InternalLink href="/resources/competitive">How Ignition&apos;s creative engine compares</InternalLink>
+        <InternalLink href="/insider">Latest competitive intel on the creative-tech category</InternalLink>
       </div>
     </>
   );
