@@ -11,7 +11,7 @@ export default function MarketingHubPage() {
       <PageHeader
         title="Distributed Marketing / DAM"
         subtitle="The front door for local operators — programs, co-op funds, brand-safe templates, AI recommendations, and the brand asset library that powers it all."
-        status="phase3"
+        status="roadmap"
       />
 
       {/* Section A: Problem */}

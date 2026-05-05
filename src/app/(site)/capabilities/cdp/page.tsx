@@ -11,7 +11,7 @@ export default function CdpPage() {
       <PageHeader
         title="CDP & Audience Builder"
         subtitle="Unified customer data from every system that touches a buyer — and the builder that turns it into activated audiences."
-        status="phase2"
+        status="roadmap"
       />
 
       {/* Section A: Problem */}

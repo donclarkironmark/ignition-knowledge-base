@@ -1,6 +1,13 @@
 import type { NavStatus } from '@/config/navigation';
 
-const BANNER_STYLES: Record<NavStatus, { bg: string; text: string; message: string }> = {
+/**
+ * Banner status is decoupled from the nav `NavStatus` so a page can show a
+ * "roadmap" framing without forcing its sidebar/card classification to
+ * match. Use `roadmap` for capabilities whose timing isn't quarter-locked.
+ */
+export type BannerStatus = NavStatus | 'roadmap';
+
+const BANNER_STYLES: Record<BannerStatus, { bg: string; text: string; message: string }> = {
   live: {
     bg: 'bg-emerald-50 border-emerald-200',
     text: 'text-emerald-700',
@@ -16,12 +23,17 @@ const BANNER_STYLES: Record<NavStatus, { bg: string; text: string; message: stri
     text: 'text-gray-600',
     message: 'This capability is on the roadmap.',
   },
+  roadmap: {
+    bg: 'bg-amber-50 border-amber-200',
+    text: 'text-amber-700',
+    message: 'This capability is on the roadmap.',
+  },
 };
 
 interface PageHeaderProps {
   title: string;
   subtitle: string;
-  status?: NavStatus;
+  status?: BannerStatus;
 }
 
 export function PageHeader({ title, subtitle, status }: PageHeaderProps) {

@@ -11,7 +11,7 @@ export default function FullFunnelAutomationPage() {
       <PageHeader
         title="Full-funnel & Automation"
         subtitle="Trigger-based workflows, lead nurturing, and conversion catalysts embedded into daily operations."
-        status="phase3"
+        status="roadmap"
       />
 
       {/* Section A: Problem */}
