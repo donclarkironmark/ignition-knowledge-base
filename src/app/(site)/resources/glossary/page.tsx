@@ -205,7 +205,7 @@ export default function GlossaryPage() {
               )}
               <div className="rounded-lg border border-brand-border bg-white p-4">
                 <div className="flex items-start justify-between gap-4 mb-1">
-                  <h3 className="text-base font-semibold text-foreground">{t.term}</h3>
+                  <h3 className="text-lg font-semibold text-foreground">{t.term}</h3>
                   <span className="shrink-0 text-[10px] font-medium text-brand-gray bg-brand-off-white rounded-full px-2 py-0.5">
                     {t.context}
                   </span>

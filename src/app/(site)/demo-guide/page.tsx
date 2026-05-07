@@ -39,7 +39,7 @@ export default function DemoGuidePage() {
               <span className="shrink-0 w-8 h-8 rounded-full bg-brand-cyan/10 text-brand-cyan flex items-center justify-center text-sm font-bold">
                 {step.time}
               </span>
-              <h3 className="text-base font-semibold text-foreground">{step.title}</h3>
+              <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
             </div>
             <p className="text-sm text-brand-gray leading-relaxed">{step.description}</p>
           </div>

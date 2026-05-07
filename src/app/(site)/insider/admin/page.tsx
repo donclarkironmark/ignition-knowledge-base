@@ -405,7 +405,7 @@ function ReviewQueue({
                 <CategoryBadge category={post.category} />
                 <span className="text-xs text-slate-400">Score: {post.relevance_score}/10</span>
               </div>
-              <h3 className="font-semibold text-slate-900 mb-1">{post.title}</h3>
+              <h3 className="text-lg font-semibold text-slate-900 mb-1">{post.title}</h3>
               <p className="text-sm text-slate-600 line-clamp-2">{post.summary}</p>
               {post.review_notes && (
                 <div className="mt-2 p-2 bg-amber-50 rounded text-xs text-amber-700">

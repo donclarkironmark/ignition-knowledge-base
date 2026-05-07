@@ -33,7 +33,7 @@ export default function CdpPage() {
       <div className="space-y-5 mb-8">
         {FEATURES.map((feature) => (
           <div key={feature.title} className="rounded-lg border border-brand-border bg-white p-5">
-            <h3 className="text-base font-semibold text-foreground mb-1">{feature.title}</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-1">{feature.title}</h3>
             <p className="text-sm text-brand-gray leading-relaxed">{feature.description}</p>
           </div>
         ))}

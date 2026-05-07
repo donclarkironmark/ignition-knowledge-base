@@ -31,7 +31,7 @@ export default function IggyAiPage() {
       <SectionHeading>Proactive alerts and on-demand answers</SectionHeading>
       <div className="grid gap-4 sm:grid-cols-2 mb-8">
         <div className="rounded-lg border border-brand-border bg-white p-5">
-          <h3 className="text-base font-semibold text-foreground mb-2">Persistent Insights Panel</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-2">Persistent Insights Panel</h3>
           <p className="text-sm text-brand-gray leading-relaxed">
             Iggy proactively surfaces issues: underperforming locations, budget anomalies,
             campaign opportunities. You do not need to ask — the alerts come to you. Think
@@ -40,7 +40,7 @@ export default function IggyAiPage() {
           </p>
         </div>
         <div className="rounded-lg border border-brand-border bg-white p-5">
-          <h3 className="text-base font-semibold text-foreground mb-2">Ask Iggy Chat</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-2">Ask Iggy Chat</h3>
           <p className="text-sm text-brand-gray leading-relaxed">
             Type a question in plain English and get an answer grounded in live data.
             &ldquo;Which locations are underperforming this month?&rdquo; &ldquo;Why did

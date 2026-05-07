@@ -52,7 +52,7 @@ export default function HomePage() {
             className={`rounded-lg border bg-white p-5 ${phase.borderClass}`}
           >
             <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
-              <h3 className="text-base font-semibold text-foreground">{phase.label}</h3>
+              <h3 className="text-lg font-semibold text-foreground">{phase.label}</h3>
               <span className={`text-xs font-semibold uppercase tracking-wider ${phase.tagClass}`}>
                 {phase.tag}
               </span>
