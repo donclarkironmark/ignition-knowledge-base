@@ -61,7 +61,7 @@ function EditionPostCard({ post }: { post: InsiderPost }) {
             {meta.label}
           </span>
         </div>
-        <h3 className="font-semibold text-slate-900 group-hover:text-ironmark-red transition-colors text-sm leading-snug">
+        <h3 className="font-semibold text-slate-900 group-hover:text-ironmark-red transition-colors text-base leading-snug">
           {post.title}
         </h3>
         <p className="text-xs text-slate-500 mt-1 line-clamp-2">{post.summary}</p>

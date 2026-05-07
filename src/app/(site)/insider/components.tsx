@@ -63,7 +63,7 @@ export function PostCard({ post }: { post: InsiderPost }) {
 
       {/* Title */}
       <Link href={`/insider/posts/${post.slug}`} className="group/title">
-        <h2 className="font-veneer text-xl text-slate-900 group-hover/title:text-ironmark-red transition-colors leading-tight">
+        <h2 className="font-veneer text-2xl text-slate-900 group-hover/title:text-ironmark-red transition-colors leading-tight">
           {post.title}
         </h2>
       </Link>
