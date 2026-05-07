@@ -242,29 +242,30 @@ export default function EditionEditorPage() {
             <button
               type="button"
               onClick={handleSave}
-              disabled={saving || isPublished}
+              disabled={saving}
               className="px-4 py-2 bg-slate-100 text-slate-700 text-sm font-medium rounded-lg hover:bg-slate-200 disabled:opacity-50 transition-colors"
             >
-              {saving ? 'Saving...' : 'Save Draft'}
+              {saving ? 'Saving...' : isPublished ? 'Save Changes' : 'Save Draft'}
             </button>
-            {!isPublished && (
-              <button
-                type="button"
-                onClick={handlePublish}
-                disabled={publishing}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-[#E9472F] text-white text-sm font-medium rounded-lg hover:bg-[#d33e29] disabled:opacity-50 transition-colors"
-              >
-                <Globe size={14} />
-                {publishing ? 'Publishing...' : 'Publish Edition'}
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={handlePublish}
+              disabled={publishing}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#E9472F] text-white text-sm font-medium rounded-lg hover:bg-[#d33e29] disabled:opacity-50 transition-colors"
+            >
+              <Globe size={14} />
+              {publishing
+                ? (isPublished ? 'Updating...' : 'Publishing...')
+                : (isPublished ? 'Update Live Edition' : 'Publish Edition')}
+            </button>
           </div>
         </div>
 
         {isPublished && (
-          <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-lg text-sm text-emerald-800">
-            This edition was published on {edition.published_at ? new Date(edition.published_at).toLocaleDateString() : 'unknown date'}.
-            Editing is disabled for published editions.
+          <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800">
+            <strong>This edition is live.</strong>{' '}
+            Published on {edition.published_at ? new Date(edition.published_at).toLocaleDateString() : 'unknown date'}.
+            Edits save directly to the live edition — already-sent emails won&apos;t change, but anyone visiting the public page will see the update.
           </div>
         )}
 
@@ -278,7 +279,6 @@ export default function EditionEditorPage() {
               type="text"
               value={edTitle}
               onChange={e => setEdTitle(e.target.value)}
-              disabled={isPublished}
               placeholder={`Ignition Insider — Week of ${edition.week_start}`}
               className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent disabled:bg-slate-50 disabled:text-slate-400"
             />
@@ -289,7 +289,6 @@ export default function EditionEditorPage() {
             <textarea
               value={executiveSummary}
               onChange={e => setExecutiveSummary(e.target.value)}
-              disabled={isPublished}
               rows={4}
               placeholder="This week's key themes and what they mean for Ironmark..."
               className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
@@ -301,7 +300,6 @@ export default function EditionEditorPage() {
             <textarea
               value={dataPointOfWeek}
               onChange={e => setDataPointOfWeek(e.target.value)}
-              disabled={isPublished}
               rows={2}
               placeholder="A compelling stat or figure from this week's research..."
               className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
@@ -313,7 +311,6 @@ export default function EditionEditorPage() {
             <textarea
               value={comingUp}
               onChange={e => setComingUp(e.target.value)}
-              disabled={isPublished}
               rows={2}
               placeholder="Upcoming events, report drops, or trends to watch..."
               className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#E9472F] focus:border-transparent resize-none disabled:bg-slate-50 disabled:text-slate-400"
@@ -342,8 +339,7 @@ export default function EditionEditorPage() {
                       <select
                         value={assignment?.section ?? ''}
                         onChange={e => handleSectionChange(post.id, e.target.value as EditionSection | '')}
-                        disabled={isPublished}
-                        className="px-2 py-1 border border-slate-300 rounded text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-[#E9472F] bg-white disabled:bg-slate-50 disabled:text-slate-400"
+                                  className="px-2 py-1 border border-slate-300 rounded text-xs text-slate-700 focus:outline-none focus:ring-1 focus:ring-[#E9472F] bg-white disabled:bg-slate-50 disabled:text-slate-400"
                       >
                         <option value="">— Not assigned —</option>
                         {VALID_EDITION_SECTIONS.map(s => (
@@ -356,8 +352,7 @@ export default function EditionEditorPage() {
                           min={0}
                           value={assignment.display_order}
                           onChange={e => handleOrderChange(post.id, parseInt(e.target.value, 10) || 0)}
-                          disabled={isPublished}
-                          title="Display order"
+                                      title="Display order"
                           className="w-14 px-2 py-1 border border-slate-300 rounded text-xs text-slate-700 text-center focus:outline-none focus:ring-1 focus:ring-[#E9472F] disabled:bg-slate-50 disabled:text-slate-400"
                         />
                       )}
