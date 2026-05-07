@@ -155,7 +155,7 @@ export default async function PostDetailPage({
         </h1>
 
         {/* Summary */}
-        <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-slate-200 pl-4">
+        <p className="text-lg text-slate-700 leading-relaxed border-l-4 border-slate-300 bg-brand-off-white py-3 pl-4 pr-4 rounded-r-lg">
           {post.summary}
         </p>
 
